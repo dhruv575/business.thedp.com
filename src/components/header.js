@@ -20,12 +20,12 @@ export const Header = ({ title = '' }) => (
     />
     <meta
       property="og:image"
-      content="https://i.ibb.co/HtsY5Sy/logo-rect.png"
+      content="https://i.ibb.co/QfVWdTg/dp-biz.png"
     />
     <meta property="og:description" content="Landing page of the DP Business team that showcases our projects and team members" />
     <meta
       property="og:url"
-      content="https://business.thedp.com/"
+      content="https://dailypenn.biz/"
     />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -35,12 +35,12 @@ export const Header = ({ title = '' }) => (
     />
     <meta
       name="twitter:image"
-      content="https://i.ibb.co/HtsY5Sy/logo-rect.png"
+      content="https://i.ibb.co/QfVWdTg/dp-biz.png"
     />
     <meta name="twitter:description" content="Landing page of the DP Business team that showcases our projects and team members" />
     <meta
       name="twitter:url"
-      content="https://business.thedp.com/"
+      content="https://dailypenn.biz/"
     />
     <meta name="twitter:site" content="@dailypenn"></meta>
 
