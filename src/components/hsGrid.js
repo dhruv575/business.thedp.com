@@ -62,7 +62,7 @@ const ContentGrid = () => {
         <Title>Opportunities for High Schoolers</Title>
         <Description>
             Learn of the most prestigious opportunities for high schoolers right into your inbox once every two weeks!
-            Peek at Penn will aim to provide our subsrciber with exclusive opportunities sourced from partners at several of the world's largest companeis!
+            Peek at Penn will aim to provide our subsrcibers with exclusive opportunities sourced from partners at several of the world's largest companeis!
         </Description>
       </ContentBlock>
     </GridContainer>

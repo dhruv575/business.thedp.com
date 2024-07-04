@@ -53,8 +53,30 @@ const Option = styled.option`
 
 const ResponsiveRadarChart = styled(ResponsiveContainer)`
   @media (max-width: 768px) {
-    height: 300px !important;
+    height: 400px !important;
   }
+`;
+
+const CustomLegend = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+`;
+
+const LegendItem = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+`;
+
+const LegendColor = styled.span`
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 50%;
 `;
 
 const CompareColleges = () => {
@@ -194,6 +216,27 @@ const CompareColleges = () => {
 
   const colors = ['#FF7F50', '#6495ED', '#90EE90'];
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div style={{
+          backgroundColor: 'white',
+          padding: '10px',
+          border: '1px solid #ccc',
+          borderRadius: '5px',
+        }}>
+          <p>{label}</p>
+          {payload.map((entry, index) => (
+            <p key={index} style={{ color: entry.color }}>
+              {`${entry.name}: ${radarData.find(data => data.metric === label)[entry.name]}`}
+            </p>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <CompareCollegesWrapper>
       <DropdownContainer>
@@ -219,28 +262,34 @@ const CompareColleges = () => {
         ))}
       </DropdownContainer>
       {selectedUniversityData.length > 1 && (
-        <ResponsiveRadarChart width="100%" height={500}>
-          <RadarChart outerRadius="80%" data={radarDataWithScale}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="metric" />
-            <PolarRadiusAxis />
-            <Tooltip formatter={(value, name, props) => {
-              const originalValue = radarData.find(data => data.metric === props.payload.metric)[name];
-              return originalValue;
-            }} />
-            <Legend />
+        <>
+          <ResponsiveRadarChart width="100%" height={400}>
+            <RadarChart outerRadius="70%" data={radarDataWithScale}>
+              <PolarGrid />
+              <PolarAngleAxis dataKey="metric" tick={{ fontSize: 10 }} />
+              <PolarRadiusAxis tick={{ fontSize: 10 }} />
+              <Tooltip content={<CustomTooltip />} />
+              {selectedUniversityData.map((uni, index) => (
+                <Radar
+                  key={index}
+                  name={uni.university_name}
+                  dataKey={uni.university_name}
+                  stroke={colors[index]}
+                  fill={colors[index]}
+                  fillOpacity={0.5 + ((selectedUniversityData.length - index) / selectedUniversityData.length) * 0.1}
+                />
+              ))}
+            </RadarChart>
+          </ResponsiveRadarChart>
+          <CustomLegend>
             {selectedUniversityData.map((uni, index) => (
-              <Radar
-                key={index}
-                name={uni.university_name}
-                dataKey={uni.university_name}
-                stroke={colors[index]}
-                fill={colors[index]}
-                fillOpacity={0.5 + ((selectedUniversityData.length - index) / selectedUniversityData.length) * 0.1}
-              />
+              <LegendItem key={index}>
+                <LegendColor style={{ backgroundColor: colors[index] }} />
+                {uni.university_name}
+              </LegendItem>
             ))}
-          </RadarChart>
-        </ResponsiveRadarChart>
+          </CustomLegend>
+        </>
       )}
     </CompareCollegesWrapper>
   );
