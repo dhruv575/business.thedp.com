@@ -7,10 +7,10 @@ const GridContainer = styled.div`
   grid-template-columns: 1fr 1fr; // Two columns
   grid-template-rows: auto auto; // Two rows, size adjusts to content
   gap: 20px; // Space between grid items
-  padding: 0rem 2rem; // Padding around the entire grid
+  padding: 0rem 8rem; // Padding around the entire grid
 
   @media (max-width: 768px) {
-    padding: 2rem 1rem; // Reduced padding for small screens
+    padding: 2rem 2rem; // Reduced padding for small screens
     grid-template-columns: 1fr; // Makes it a single column layout on smaller screens
   }
 `;

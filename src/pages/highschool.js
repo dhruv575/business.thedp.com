@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import styled from 'styled-components';
 import ContentGrid from '../components/hsGrid'
 import CollegeData from '../components/collegedata';
+import CompareColleges from '../components/CompareColleges';
 
 import {
   Container
@@ -45,6 +46,9 @@ const ButtonContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Button = styled.a`
@@ -135,20 +139,23 @@ const PeakAtPenn = () => {
           Breaking into the Ivy League. Powered by the Ivy League.
         </SubHead>
         <ButtonContainer>
-          <Button href="#newsletter-section">Join Our Newsletter</Button>
-          <Button href="#data-section">Explore College Data</Button>
+          <Button href="#newsletter">Join Our Newsletter</Button>
+          <Button href="#data">Explore College Data</Button>
+          <Button href="#compare">Compare Colleges</Button>
         </ButtonContainer>
       </Hero>
-      <SectionTitle id="data-section">COLLEGE DATA</SectionTitle>       
+      <SectionTitle id="data">COLLEGE DATA</SectionTitle>       
       <CollegeData />  
-      <FormatSection id="newsletter-section">
-        <SectionTitle> OUR NEWSLETTER </SectionTitle>
-        <Title> 
-            Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and essays and profiles from current Penn students!
-        </Title>
-        <ContentGrid />
-        <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
+      <FormatSection id="compare">
+        <SectionTitle>COMPARE COLLEGES</SectionTitle>
+        <CompareColleges />
       </FormatSection>
+      <SectionTitle id="newsletter"> OUR NEWSLETTER </SectionTitle>
+      <Title> 
+          Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and essays and profiles from current Penn students!
+      </Title>
+      <ContentGrid />
+      <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
     </Container>
   )
 }

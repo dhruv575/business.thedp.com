@@ -20,8 +20,28 @@ const ProjectCard = styled.div`
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  background-color: #fff; // Background color of the card
+  color: #000; // Text color
+`;
+
+const ProjectImage = styled(Img)`
+  width: 100%;
+  height: 200px; // Adjust height as needed
+`;
+
+const ProjectInfo = styled.div`
+  padding: 20px;
   text-align: center;
+`;
+
+const ProjectName = styled.h3`
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+`;
+
+const ProjectDescription = styled.p`
+  font-size: 1rem;
+  margin: 0.5rem 0;
 `;
 
 const ProjectsCarousel = ({ projects }) => {
@@ -29,15 +49,11 @@ const ProjectsCarousel = ({ projects }) => {
     <GridContainer>
       {projects.map((project, index) => (
         <ProjectCard key={index}>
-          <Img
-            fluid={project.img.childImageSharp.fluid}
-            alt={project.name}
-            style={{ width: '100%', height: '200px' }} // Adjust height as needed
-          />
-          <div style={{ padding: '20px' }}>
-            <h3>{project.name}</h3>
-            <p>{project.description}</p>
-          </div>
+          <ProjectImage fluid={project.img.childImageSharp.fluid} alt={project.name} />
+          <ProjectInfo>
+            <ProjectName>{project.name}</ProjectName>
+            <ProjectDescription>{project.description}</ProjectDescription>
+          </ProjectInfo>
         </ProjectCard>
       ))}
     </GridContainer>

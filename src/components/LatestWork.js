@@ -12,7 +12,7 @@ import {
 } from '../styles/fonts';
 
 const LatestWorkWrapper = styled.div`
-  margin: 4rem 8rem; // Adjusted to 4rem on sides for symmetry
+  margin: 4rem 8rem;
   @media (max-width: 768px) {
     margin: 1rem 1rem;
   }
@@ -47,22 +47,18 @@ const responsive = {
   superLargeDesktop: {
     breakpoint: { max: 4000, min: 3000 },
     items: 3,
-    slidesToSlide: 3
   },
   desktop: {
     breakpoint: { max: 3000, min: 1024 },
     items: 3,
-    slidesToSlide: 3
   },
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    slidesToSlide: 2
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    slidesToSlide: 1
   }
 };
 
@@ -95,12 +91,15 @@ export const LatestWork = () => {
         responsive={responsive}
         ssr
         infinite
+        autoPlay
+        autoPlaySpeed={3000}
         keyBoardControl
-        customTransition="transform 1000ms ease-out"
-        transitionDuration={1000}
-        itemClass="carousel-item-padding-40-px"
+        customTransition="transform 500ms ease-out"
+        transitionDuration={500}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
+        dotListClass="custom-dot-list-style"
+        showDots={true}
       >
         {data.allProjectsJson.edges.map(({ node }, index) => (
           <ProjectContainer key={index}>
