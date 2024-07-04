@@ -45,10 +45,10 @@ const Hero = s.div`
 
 const HelloWorld = s.h1`
   ${PLAYFAIR_DISPLAY_MEDIUM}
-  font-size: 2rem;
+  font-size: 6rem;
   
   @media (max-width: 768px) {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 `
 
