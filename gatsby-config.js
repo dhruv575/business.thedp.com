@@ -6,21 +6,10 @@ module.exports = {
     `gatsby-transformer-json`,
     'gatsby-plugin-styled-components',
     {
-      resolve: 'gatsby-plugin-google-gtag',
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingIds: [
-          'G-NCT8XF7JMB', // GA4 tracking ID
-        ],
-        // this object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-          // Setting this parameter is optional
-          respectDNT: true,
-          // Avoids sending pageview hits from custom paths
-          exclude: ['/preview/**', '/do-not-track/me/too/'],
-        },
-      },
+        trackingId: 'G-NCT8XF7JMB'
+      }
     },
     'gatsby-plugin-sharp',
     'gatsby-plugin-react-helmet',
