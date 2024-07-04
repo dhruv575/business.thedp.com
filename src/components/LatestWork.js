@@ -6,17 +6,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
 
 import {
-  POPPINS_SEMI_BOLD,
-  POPPINS_MEDIUM,
-  POPPINS_LIGHT,
   PLAYFAIR_DISPLAY_LIGHT,
   MONTSERRAT_MEDIUM,
-  LATO_REGULAR,
-  RALEWAY_REGULAR,
-  PLAYFAIR_DISPLAY_MEDIUM,
-  MONTSERRAT_LIGHT,
   MONTSERRAT_REGULAR,
-  POPPINS_REGULAR
 } from '../styles/fonts';
 
 const LatestWorkWrapper = styled.div`

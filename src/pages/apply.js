@@ -146,7 +146,7 @@ const Apply = () => {
           <Recruitment open = {true}/>
           <Wrapper>
             <IFrameWrapper>
-              <iframe class="application-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSdshBhPBctwHmt52D1iUAcv_f0OVKUqM3RXiCJCvyvBojYk0A/closedform" frameborder="0" onmousewheel="" width="100%" height="600" style={{ background: "transparent", border: "1px solid #ccc" }}></iframe>
+              <iframe class="application-embed" title="team_apply" src="https://docs.google.com/forms/d/e/1FAIpQLSdshBhPBctwHmt52D1iUAcv_f0OVKUqM3RXiCJCvyvBojYk0A/closedform" frameborder="0" onmousewheel="" width="100%" height="600" style={{ background: "transparent", border: "1px solid #ccc" }}></iframe>
             </IFrameWrapper>
           </Wrapper>
         </Container>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MONTSERRAT_LIGHT, PLAYFAIR_DISPLAY_MEDIUM, POPPINS_BOLD } from '../../styles/fonts';
+import { MONTSERRAT_LIGHT, POPPINS_BOLD } from '../../styles/fonts';
 
 const GridContainer = styled.div`
   display: grid;

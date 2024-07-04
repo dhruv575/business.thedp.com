@@ -2,39 +2,20 @@ import React from 'react'
 import s from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
-import { Col } from 'react-bootstrap'
-import DepartmentsGrid from '../components/DepartmentsGrid'
 import styled from 'styled-components';
 import ContentGrid from '../components/Hackathon/TrackGrid'
 import PrizesGrid from '../components/Hackathon/PrizeGrid'
 import PartnersRow from '../components/Hackathon/PartnerScroll'
 import {
-  Container,
-  LatestWork,
-  Chevron,
-  StyledLink,
-  StyledAnchor,
-  PageTitle
+  Container
 } from '../components'
 import {
   POPPINS_BOLD,
   POPPINS_REGULAR,
   POPPINS_SEMI_BOLD,
-  MONTSERRAT_REGULAR,
   MONTSERRAT_LIGHT,
-  PLAYFAIR_DISPLAY_SEMI_BOLD,
-  PLAYFAIR_DISPLAY_LIGHT,
-  PLAYFAIR_DISPLAY_REGULAR,
-  LATO_REGULAR,
-  LATO_BOLD,
-  MONTSERRAT_BOLD,
-  MONTSERRAT_SEMI_BOLD,
-  PLAYFAIR_DISPLAY_MEDIUM,
-  MONTSERRAT_MEDIUM,
-  POPPINS_MEDIUM,
   POPPINS_LIGHT
 } from '../styles/fonts'
-import { WHITE, RED } from '../styles/constants'
 
 const Hero = s.div`
   text-align: center;
@@ -64,12 +45,6 @@ const SubHead = s.p`
   font-size: 90%;
 `
 
-const Checkout = s.p`
-  ${POPPINS_BOLD}
-  margin-top: 2rem;
-  color: ${WHITE};
-`
-
 const Title = styled.h2`
   ${POPPINS_LIGHT}
   color: #003300;
@@ -79,38 +54,6 @@ const Title = styled.h2`
   padding: 0.5rem;
 `
 
-const RecruitmentDescription = s.p`
-  margin-top: 2.5rem;
-  ${POPPINS_REGULAR}
-  font-size: 0.9rem;
-  color: white;
-`
-
-const ApplyButton = s.div`
-  background-color: black;
-  ${POPPINS_REGULAR}
-  border-radius: 5px;
-  width: 5rem;
-  text-align: center;
-  padding: 0.2rem 1rem;
-  color: white;
-  margin-top: 3rem;
-
-  @media (max-width: 768px) {
-    margin-top: 2rem;
-  }
-`
-
-const LeftColWrapper = s.div`
-  padding-top: 4rem;
-  padding-right: 5rem;
-
-  @media (max-width: 992px) {
-    margin-bottom: 2rem;
-    padding-right: 0;
-  }
-`
-
 const FormatSection = s.section`
   padding: 0.5rem 2rem;
   padding-bottom: 2rem;
@@ -118,14 +61,6 @@ const FormatSection = s.section`
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0,0,0,0.5); // This adds a slight shadow for depth
   margin-top: 2rem;
-`;
-
-const SectionHeader = s.h2`
-  ${POPPINS_MEDIUM}
-  color: #000; // Adjust color to match your design
-  text-align: left;
-  margin-top: 0;
-  margin-bottom: 1rem;
 `;
 
 const List = s.ul`
@@ -147,13 +82,6 @@ const ListSpacer= s.li`
   padding-bottom: 3.2rem; // Add space between list items
   padding-left: 1rem; // Add padding to the left of the text
   border-left: 4px solid #003300; // Blue line on the left, adjust the color as needed
-`;
-
-const InfoText = s.p`
-  ${POPPINS_REGULAR}
-  color: #333; // Dark grey text for readability
-  font-size: 0.9rem;
-  padding-left: 11rem;
 `;
 
 const SectionTitle = styled.h2`

@@ -95,7 +95,7 @@ export const Footer = () => (
   <StyledRow>
     <ColWithMargin md={6}>
       <FooterText>
-        Made with 💖 by DP Business (Droov) <br /> &copy; The Daily
+        Made with love by DP Business <br /> &copy; The Daily
         Pennsylvanian 2024
       </FooterText>
       <StyledLink to="/apply">

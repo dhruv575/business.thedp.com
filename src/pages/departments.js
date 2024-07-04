@@ -11,7 +11,7 @@ import {
   PageDescription,
   StyledAnchor
 } from '../components'
-import { MONTSERRAT_LIGHT, PLAYFAIR_DISPLAY_MEDIUM, POPPINS_MEDIUM, POPPINS_REGULAR } from '../styles/fonts'
+import { MONTSERRAT_LIGHT, PLAYFAIR_DISPLAY_MEDIUM } from '../styles/fonts'
 import { BLUE_PERCENT, RED_PERCENT, BLUE, RED } from '../styles/constants'
 
 const WHITE = `#FFFFFF`

@@ -4,12 +4,16 @@ import styled from 'styled-components';
 
 import { StyledLink } from './typography';
 import { ApplyButtonNav } from './badge';
-import { MONTSERRAT_SEMI_BOLD, POPPINS_SEMI_BOLD } from '../styles/fonts';
+import { POPPINS_SEMI_BOLD } from '../styles/fonts';
 
 const LINKS = [
   {
     name: 'Hacks',
     link: '/hacks'
+  },
+  {
+    name: 'Peek@Penn',
+    link: '/highschool'
   },
   {
     name: 'What We Do',
@@ -32,6 +36,10 @@ const NavBarText = styled(Navbar.Text)`
   ${POPPINS_SEMI_BOLD}
   font-color: #000000;
 `;
+
+const Flextainer = styled.div`
+  padding: 0.5rem
+`
 
 const StyledNavDropdown = styled(NavDropdown)`
   &.dropdown {
@@ -73,7 +81,7 @@ const NavText = ({ link, name, submenu }) => {
   };
 
   return (
-    <div
+    <Flextainer
       style={{ position: 'relative', marginRight: '1.5rem', display: 'flex', alignItems: 'center' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -96,7 +104,7 @@ const NavText = ({ link, name, submenu }) => {
           ))}
         </StyledNavDropdown>
       )}
-    </div>
+    </Flextainer>
   );
 };
 

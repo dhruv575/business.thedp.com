@@ -7,7 +7,7 @@ import ProjectsCarousel from '../components/projectCarousel';
 
 import { Container, PageTitle, Badge } from '../components'
 import { LIGHT_BLUE, WHITE, RED, RED_PERCENT } from '../styles/constants'
-import { POPPINS_SEMI_BOLD, POPPINS_LIGHT, POPPINS_BOLD, MONTSERRAT_BOLD, MONTSERRAT_LIGHT, PLAYFAIR_DISPLAY_SEMI_BOLD, MONTSERRAT_REGULAR, PLAYFAIR_DISPLAY_REGULAR } from '../styles/fonts'
+import { POPPINS_LIGHT, POPPINS_BOLD, MONTSERRAT_LIGHT, MONTSERRAT_REGULAR, PLAYFAIR_DISPLAY_REGULAR } from '../styles/fonts'
 
 const CardWrapper = s.div`
   background-color: ${WHITE};

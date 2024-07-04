@@ -3,12 +3,11 @@ import s from 'styled-components'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import { Row, Col } from 'react-bootstrap'
-import ContentGrid from '../components/funGrid'
 import LetterFromPresident from '../components/Letter'
 
 import { Container, PageTitle, Badge } from '../components'
 import { LIGHT_BLUE, WHITE, RED, RED_PERCENT } from '../styles/constants'
-import { POPPINS_SEMI_BOLD, POPPINS_LIGHT, POPPINS_BOLD, MONTSERRAT_BOLD, PLAYFAIR_DISPLAY_LIGHT, PLAYFAIR_DISPLAY_MEDIUM } from '../styles/fonts'
+import { POPPINS_LIGHT, POPPINS_BOLD, MONTSERRAT_BOLD, PLAYFAIR_DISPLAY_LIGHT, PLAYFAIR_DISPLAY_MEDIUM } from '../styles/fonts'
 
 const CardWrapper = s.div`
   background-color: ${WHITE};

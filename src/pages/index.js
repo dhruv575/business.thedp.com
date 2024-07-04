@@ -16,19 +16,12 @@ import {
 import {
   POPPINS_BOLD,
   POPPINS_REGULAR,
-  POPPINS_SEMI_BOLD,
-  MONTSERRAT_REGULAR,
-  PLAYFAIR_DISPLAY_SEMI_BOLD,
   PLAYFAIR_DISPLAY_LIGHT,
-  PLAYFAIR_DISPLAY_REGULAR,
-  LATO_REGULAR,
-  LATO_BOLD,
-  MONTSERRAT_BOLD,
   MONTSERRAT_SEMI_BOLD,
   PLAYFAIR_DISPLAY_MEDIUM,
   MONTSERRAT_MEDIUM
 } from '../styles/fonts'
-import { WHITE, RED } from '../styles/constants'
+import { WHITE } from '../styles/constants'
 
 const Hero = s.div`
   text-align: center;
@@ -127,42 +120,8 @@ const LeftColWrapper = s.div`
 `
 
 const Recruitment = () => {
-  const { allTeamJson, allProjectsJson, imageSharp } = useStaticQuery(graphql`
+  const { imageSharp } = useStaticQuery(graphql`
   query {
-    allTeamJson {
-      nodes {
-        name
-        description
-        members {
-          name
-          tags
-          emoji
-          from
-          img {
-            childImageSharp {
-              fluid(maxWidth: 1000, maxHeight: 1000) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
-      }
-    }
-    allProjectsJson {
-      nodes {
-        name
-        description
-        img {
-          childImageSharp {
-            fluid(maxWidth: 1000, maxHeight: 1000) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        team
-        link
-      }
-    }
     imageSharp(fluid: { originalName: { eq: "IMG_8363.jpg" } }) {
       fluid(maxWidth: 800) {
         ...GatsbyImageSharpFluid
@@ -200,9 +159,9 @@ const Index = () => {
   return (
     <Container>
       <Hero>
-        <span role="emoji" style={{ fontSize: '4rem' }}>
+        <p style={{ fontSize: '4rem' }}>
         WELCOME TO
-        </span>
+        </p>
         <HelloWorld> DP Business </HelloWorld>
         <p style={{ fontSize: '2.5rem' }}></p>
         <SubHead>
