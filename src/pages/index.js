@@ -45,7 +45,11 @@ const Hero = s.div`
 
 const HelloWorld = s.h1`
   ${PLAYFAIR_DISPLAY_MEDIUM}
-  font-size: 6rem;
+  font-size: 2rem;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `
 
 const SubHead = s.p`
@@ -159,7 +163,7 @@ const Index = () => {
   return (
     <Container>
       <Hero>
-        <p style={{ fontSize: '4rem' }}>
+        <p style={{ fontSize: '2rem' }}>
         WELCOME TO
         </p>
         <HelloWorld> DP Business </HelloWorld>

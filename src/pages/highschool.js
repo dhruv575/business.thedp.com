@@ -60,6 +60,10 @@ const Button = styled.a`
   &:hover {
     transform: scale(1.02);
   }
+  @media screen and (max-width: 768px) {
+    padding: 0.5rem 0.5rem;
+    margin: 0.5rem;
+  }
 `;
 
 const Title = styled.h2`
