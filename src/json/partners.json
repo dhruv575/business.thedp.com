@@ -1,14 +1,12 @@
 [
     {
         "name": "Daily Pennsylvanian",
-        "img": "../images/partnerLogos/dp-logo.png"
+        "img": "../images/partnerLogos/dp-logo.png",
+        "link": "https://www.thedp.com"
     },
     {
-        "name": "Under the Button",
-        "img": "../images/partnerLogos/utb.png"
-    },
-    {
-        "name": "34th Street",
-        "img": "../images/partnerLogos/34st.jpg"
+        "name": "Afore Capital",
+        "img": "../images/partnerLogos/afore capital.jpg",
+        "link": "https://www.afore.vc/"
     }
 ]

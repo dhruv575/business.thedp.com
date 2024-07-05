@@ -11,11 +11,43 @@ const PartnersContainer = styled.div`
     margin: 2rem;
 `;
 
-const PartnerLogo = styled.img`  // Changed from styled(Img) to styled.img since we are not using gatsby-image now
-    height: 200px;
+const PartnerWrapper = styled.div`
+    position: relative;
     flex-shrink: 0;
     margin-right: 20px;
     scroll-snap-align: start;
+    cursor: pointer;
+`;
+
+const PartnerLogo = styled.img`
+    height: 200px;
+    transition: opacity 0.3s ease-in-out;
+    width: 100%;
+`;
+
+const Overlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+
+    ${PartnerWrapper}:hover & {
+        opacity: 1;
+    }
+`;
+
+const PartnerName = styled.div`
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
 `;
 
 const PartnersRow = () => {
@@ -28,18 +60,29 @@ const PartnersRow = () => {
                         img {
                             publicURL
                         }
+                        link
                     }
                 }
             }
         }
     `);
 
+    const handlePartnerClick = (link) => {
+        window.open(link, '_blank');
+    };
+
     return (
         <PartnersContainer>
             {data.allPartnersJson.edges.map(({ node }) => (
-                <div key={node.name}>
+                <PartnerWrapper
+                    key={node.name}
+                    onClick={() => handlePartnerClick(node.link)}
+                >
                     <PartnerLogo src={node.img.publicURL} alt={node.name} />
-                </div>
+                    <Overlay>
+                        <PartnerName>{node.name}</PartnerName>
+                    </Overlay>
+                </PartnerWrapper>
             ))}
         </PartnersContainer>
     );

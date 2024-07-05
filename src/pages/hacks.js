@@ -159,7 +159,7 @@ const Index = () => {
     <Container title="Hacks | ">
       <Hero>
         <HelloWorld> DP Hacks </HelloWorld>
-        <p style={{ fontSize: '2.5rem' }}></p>
+        <p style={{ fontSize: '1.5rem' }}>Backed by Afore Capital</p>
         <SubHead>
             Build products to help the Penn community thrive, <br /> Solve problems you and your friends face daily.
         </SubHead>
