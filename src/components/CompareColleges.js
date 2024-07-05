@@ -71,7 +71,7 @@ const ChartWrapper = styled.div`
   @media (max-width: 768px) {
     width: 100%;
     margin-top: -1rem;
-    margin-bottom: -4rem;
+    margin-bottom: -5rem;
     padding: 0rem;
   }
 `;
@@ -111,6 +111,7 @@ const RadarTitle = styled.h3`
   font-size: 1.5rem;
   @media (max-width: 768px) {
     font-size: 1.1rem;
+    margin-bottom: 0rem;
   }
 `;
 
