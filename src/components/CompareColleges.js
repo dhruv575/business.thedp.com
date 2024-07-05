@@ -70,6 +70,9 @@ const ChartWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
+    margin-top: -1rem;
+    margin-bottom: -4rem;
+    padding: 0rem;
   }
 `;
 
@@ -107,7 +110,7 @@ const RadarTitle = styled.h3`
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
   }
 `;
 
@@ -362,7 +365,7 @@ const CompareColleges = () => {
         <ChartsContainer>
           <ChartWrapper>
             <RadarTitle>Admission</RadarTitle>
-            <ResponsiveRadarChart width="100%" height={360}>
+            <ResponsiveRadarChart width="100%" height={330}>
               <RadarChart outerRadius="80%" data={radarDataWithScale}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="metric" tick={{ fontSize: 12 }} />
@@ -383,7 +386,7 @@ const CompareColleges = () => {
           </ChartWrapper>
           <ChartWrapper>
             <RadarTitle>Student Life</RadarTitle>
-            <ResponsiveRadarChart width="100%" height={360}>
+            <ResponsiveRadarChart width="100%" height={330}>
               <RadarChart outerRadius="80%" data={nicheRadarDataWithScale}>
                 <PolarGrid />
                 <PolarAngleAxis dataKey="metric" tick={{ fontSize: 12 }} />
