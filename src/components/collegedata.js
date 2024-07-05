@@ -93,6 +93,26 @@ const CollegeData = () => {
           }
         }
       }
+      allNicheJson {
+        edges {
+          node {
+            name
+            niche_link
+            academics
+            value
+            diversity
+            campus
+            athletics
+            party_scene
+            professors
+            location
+            dorms
+            campus_food
+            student_life
+            safety
+          }
+        }
+      }
     }
   `);
 
@@ -100,17 +120,27 @@ const CollegeData = () => {
   const universityData = data.allT20Json.edges.reduce((acc, { node }) => {
     const { university_name, year, ...rest } = node;
     if (!acc[university_name]) {
-      acc[university_name] = {};
+      acc[university_name] = { t20: {}, niche: {} };
     }
-    acc[university_name][year] = { year, ...rest };
+    acc[university_name].t20[year] = { year, ...rest };
     return acc;
   }, {});
+
+  // Add niche data to university data
+  data.allNicheJson.edges.forEach(({ node }) => {
+    const { name, ...nicheData } = node;
+    if (!universityData[name]) {
+      universityData[name] = { t20: {}, niche: nicheData };
+    } else {
+      universityData[name].niche = nicheData;
+    }
+  });
 
   // Extract and sort universities by their 2024 ranking
   const universities2024 = Object.keys(universityData)
     .map(university => ({
       university,
-      ranking: universityData[university][2024]?.ranking || Number.MAX_VALUE, // Handle missing rankings
+      ranking: universityData[university].t20[2024]?.ranking || Number.MAX_VALUE, // Handle missing rankings
     }))
     .sort((a, b) => a.ranking - b.ranking);
 

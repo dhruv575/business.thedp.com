@@ -102,11 +102,45 @@ const Subtitle = styled.h3`
   }
 `;
 
+const StudentLifeContainer = styled.div`
+  grid-column: span 3; // Span across all columns
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); // Responsive columns
+  gap: 10px;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+`;
+
+const StudentLifeItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  width: 80px;
+  height: 80px;
+  text-align: center;
+`;
+
+const StudentLifeLabel = styled.span`
+  font-size: 0.7rem;
+  margin-bottom: 5px;
+`;
+
 const DataDisplay = ({ data }) => {
   const getStats = (field) => {
-    if (data[2024]?.[field]) return { value: data[2024][field], year: 2024 };
-    if (data[2023]?.[field]) return { value: data[2023][field], year: 2023 };
-    if (data[2022]?.[field]) return { value: data[2022][field], year: 2022 };
+    if (data.t20[2024]?.[field]) return { value: data.t20[2024][field], year: 2024 };
+    if (data.t20[2023]?.[field]) return { value: data.t20[2023][field], year: 2023 };
+    if (data.t20[2022]?.[field]) return { value: data.t20[2022][field], year: 2022 };
     return { value: 'N/A', year: null };
   };
 
@@ -117,12 +151,12 @@ const DataDisplay = ({ data }) => {
   const admitToEnrollRate = getStats('total_enr')?.value / getStats('total_adm')?.value;
 
   const rankings = [
-    { year: 2022, ranking: data[2022]?.ranking || 0 },
-    { year: 2023, ranking: data[2023]?.ranking || 0 },
-    { year: 2024, ranking: data[2024]?.ranking || 0 },
+    { year: 2022, ranking: data.t20[2022]?.ranking || 0 },
+    { year: 2023, ranking: data.t20[2023]?.ranking || 0 },
+    { year: 2024, ranking: data.t20[2024]?.ranking || 0 },
   ];
 
-  const waitlistData = Object.values(data).map(yearData => ({
+  const waitlistData = Object.values(data.t20).map(yearData => ({
     year: yearData.year,
     offers: yearData.wl_offer,
     accepts: yearData.wl_adm,
@@ -131,19 +165,69 @@ const DataDisplay = ({ data }) => {
 
   const maxRate = Math.ceil(Math.max(...waitlistData.map(d => d.rate)) * 1.5 * 100) / 100;
 
-  const applicantsData = Object.values(data).map(yearData => ({
+  const applicantsData = Object.values(data.t20).map(yearData => ({
     year: yearData.year,
     men: yearData.men_app,
     women: yearData.women_app,
   })).filter(d => d.men !== undefined && d.women !== undefined);
 
-  const acceptanceRateData = Object.values(data).map(yearData => ({
+  const acceptanceRateData = Object.values(data.t20).map(yearData => ({
     year: yearData.year,
     totalAcceptanceRate: yearData.total_app ? (yearData.total_adm / yearData.total_app) * 100 : null,
   })).filter(d => d.totalAcceptanceRate !== null);
 
   return (
     <Container>
+      <StudentLifeContainer>
+        <StudentLifeItem>
+          <StudentLifeLabel>Academics</StudentLifeLabel>
+          <BoldNumber>{data.niche.academics}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Value</StudentLifeLabel>
+          <BoldNumber>{data.niche.value}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Diversity</StudentLifeLabel>
+          <BoldNumber>{data.niche.diversity}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Campus</StudentLifeLabel>
+          <BoldNumber>{data.niche.campus}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Athletics</StudentLifeLabel>
+          <BoldNumber>{data.niche.athletics}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Party Scene</StudentLifeLabel>
+          <BoldNumber>{data.niche.party_scene}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Professors</StudentLifeLabel>
+          <BoldNumber>{data.niche.professors}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Location</StudentLifeLabel>
+          <BoldNumber>{data.niche.location}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Dorms</StudentLifeLabel>
+          <BoldNumber>{data.niche.dorms}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Campus Food</StudentLifeLabel>
+          <BoldNumber>{data.niche.campus_food}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Student Life</StudentLifeLabel>
+          <BoldNumber>{data.niche.student_life}</BoldNumber>
+        </StudentLifeItem>
+        <StudentLifeItem>
+          <StudentLifeLabel>Safety</StudentLifeLabel>
+          <BoldNumber>{data.niche.safety}</BoldNumber>
+        </StudentLifeItem>
+      </StudentLifeContainer>
       <LeftColumn>
         <Section>
           <Title>Rankings</Title>
@@ -172,18 +256,18 @@ const DataDisplay = ({ data }) => {
       <MiddleColumn>
         <Section>
           <Title>Common Data Set Links</Title>
-          {data[2022]?.link && <p><a href={data[2022].link} target="_blank" rel="noopener noreferrer">2022</a></p>}
-          {data[2023]?.link && <p><a href={data[2023].link} target="_blank" rel="noopener noreferrer">2023</a></p>}
-          {data[2024]?.link && <p><a href={data[2024].link} target="_blank" rel="noopener noreferrer">2024</a></p>}
+          {data.t20[2022]?.link && <p><a href={data.t20[2022].link} target="_blank" rel="noopener noreferrer">2022</a></p>}
+          {data.t20[2023]?.link && <p><a href={data.t20[2023].link} target="_blank" rel="noopener noreferrer">2023</a></p>}
+          {data.t20[2024]?.link && <p><a href={data.t20[2024].link} target="_blank" rel="noopener noreferrer">2024</a></p>}
         </Section>
         <Section>
           <Title>Admitted Student Statistics</Title>
           <Subtitle>Admitted ACT Scores</Subtitle>
           <ChartContainer>
             <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={Object.values(data)}>
+              <LineChart data={Object.values(data.t20)}>
                 <XAxis dataKey="year" />
-                <YAxis domain={[30, 36]} />
+                <YAxis domain={[27, 36]} />
                 <CartesianGrid strokeDasharray="3 3" />
                 <Tooltip />
                 <Legend />
@@ -196,9 +280,9 @@ const DataDisplay = ({ data }) => {
           <Subtitle>Admitted SAT Scores</Subtitle>
           <ChartContainer>
             <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={Object.values(data)}>
+              <LineChart data={Object.values(data.t20)}>
                 <XAxis dataKey="year" />
-                <YAxis domain={[1400, 1600]} />
+                <YAxis domain={[1360, 1600]} />
                 <CartesianGrid strokeDasharray="3 3" />
                 <Tooltip />
                 <Legend />
@@ -209,8 +293,8 @@ const DataDisplay = ({ data }) => {
             </ResponsiveContainer>
           </ChartContainer>
           <Subtitle>Average Admitted GPA</Subtitle>
-          {data[2024]?.avg_gpa ? (
-            <p><BoldNumber>{data[2024].avg_gpa}</BoldNumber></p>
+          {data.t20[2024]?.avg_gpa ? (
+            <p><BoldNumber>{data.t20[2024].avg_gpa}</BoldNumber></p>
           ) : (
             <p>No GPA information provided</p>
           )}
