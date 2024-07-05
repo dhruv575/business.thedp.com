@@ -4,56 +4,35 @@ import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid, Legend, Responsi
 import { POPPINS_BOLD } from '../styles/fonts';
 
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr; // Three columns layout
+  display: flex;
+  flex-direction: column;
   gap: 20px;
   padding: 1rem;
   background-color: #000080;
   color: white;
+`;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr; // Single column layout for small screens
-    padding: 0.5rem;
+const ColumnsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
   }
 `;
 
-const LeftColumn = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr; // Two rows each taking up 50% of the height
+const Column = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 20px;
-
-  @media (max-width: 768px) {
-    grid-template-rows: auto; // Adjust to auto for small screens
-    gap: 10px;
-  }
-`;
-
-const MiddleColumn = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 3fr; // Two rows, top takes 25% and bottom takes 75%
-  gap: 20px;
-
-  @media (max-width: 768px) {
-    grid-template-rows: auto; // Adjust to auto for small screens
-    gap: 10px;
-  }
-`;
-
-const RightColumn = styled.div`
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr; // Three rows each taking up 1/3 of the height
-  gap: 20px;
-
-  @media (max-width: 768px) {
-    grid-template-rows: auto; // Adjust to auto for small screens
-    gap: 10px;
-  }
+  flex: 1;
 `;
 
 const Section = styled.div`
   background-color: white;
   color: black;
-  padding: 1rem; // Adjusted padding to 1rem
+  padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   font-size: 0.9rem;
@@ -61,61 +40,46 @@ const Section = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  @media (max-width: 768px) {
-    padding: 0.5rem; // Reduced padding for small screens
-    font-size: 0.8rem; // Smaller font size for small screens
-  }
 `;
 
 const Title = styled.h2`
   ${POPPINS_BOLD}
-  font-size: 1.5rem;
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-align: center;
 
-  @media (max-width: 768px) {
-    font-size: 1.2rem; // Adjusted font size for small screens
+  @media (min-width: 768px) {
+    font-size: 1.5rem;
   }
-`;
-
-const BoldNumber = styled.span`
-  font-weight: bold;
 `;
 
 const ChartContainer = styled.div`
   width: 100%;
-  max-width: 600px; // Optional: Adjust max-width as needed
-
-  @media (max-width: 768px) {
-    max-width: 100%; // Full width for small screens
-  }
+  height: 200px;
+  max-width: 100%;
 `;
 
 const Subtitle = styled.h3`
   ${POPPINS_BOLD}
   color: #000;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin: 10px 0;
+  text-align: center;
 
-  @media (max-width: 768px) {
-    font-size: 0.9rem; // Adjusted font size for small screens
+  @media (min-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
 const StudentLifeContainer = styled.div`
-  grid-column: span 3; // Span across all columns
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); // Responsive columns
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   gap: 10px;
   background-color: white;
   color: black;
   padding: 1rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
-  @media (max-width: 768px) {
-    padding: 0.5rem;
-  }
 `;
 
 const StudentLifeItem = styled.div`
@@ -123,18 +87,32 @@ const StudentLifeItem = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 8px;
   border-radius: 50%;
   background-color: #f0f0f0;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    width: 80px;
+    height: 80px;
+  }
 `;
 
 const StudentLifeLabel = styled.span`
-  font-size: 0.7rem;
-  margin-bottom: 5px;
+  font-size: 0.6rem;
+  margin-bottom: 3px;
+
+  @media (min-width: 768px) {
+    font-size: 0.7rem;
+  }
 `;
+
+const BoldNumber = styled.span`
+  font-weight: bold;
+`;
+
 
 const DataDisplay = ({ data }) => {
   const getStats = (field) => {
@@ -228,138 +206,140 @@ const DataDisplay = ({ data }) => {
           <BoldNumber>{data.niche.safety}</BoldNumber>
         </StudentLifeItem>
       </StudentLifeContainer>
-      <LeftColumn>
-        <Section>
-          <Title>Rankings</Title>
-          <ChartContainer>
-            <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={rankings}>
-                <XAxis dataKey="year" />
-                <YAxis domain={[0, Math.max(...rankings.map(r => r.ranking)) + 3]} />
-                <CartesianGrid strokeDasharray="3 3" />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="ranking" stroke="#007bff" />
-              </LineChart>
-            </ResponsiveContainer>
-          </ChartContainer>
-        </Section>
-        <Section>
-          <Title>General Statistics</Title>
-          <p>Total Undergrads: <BoldNumber>{totalUndergrads.value}</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
-          <p>Acceptance Rate Men: <BoldNumber>{(acceptanceRateMen * 100).toFixed(2)}%</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
-          <p>Acceptance Rate Women: <BoldNumber>{(acceptanceRateWomen * 100).toFixed(2)}%</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
-          <p>Total Acceptance Rate: <BoldNumber>{(totalAcceptanceRate * 100).toFixed(2)}%</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
-          <p>Admit to Enroll Rate: <BoldNumber>{(admitToEnrollRate * 100).toFixed(2)}%</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
-        </Section>
-      </LeftColumn>
-      <MiddleColumn>
-        <Section>
-          <Title>Common Data Set Links</Title>
-          {data.t20[2022]?.link && <p><a href={data.t20[2022].link} target="_blank" rel="noopener noreferrer">2022</a></p>}
-          {data.t20[2023]?.link && <p><a href={data.t20[2023].link} target="_blank" rel="noopener noreferrer">2023</a></p>}
-          {data.t20[2024]?.link && <p><a href={data.t20[2024].link} target="_blank" rel="noopener noreferrer">2024</a></p>}
-        </Section>
-        <Section>
-          <Title>Admitted Student Statistics</Title>
-          <Subtitle>Admitted ACT Scores</Subtitle>
-          <ChartContainer>
-            <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={Object.values(data.t20)}>
-                <XAxis dataKey="year" />
-                <YAxis domain={[27, 36]} />
-                <CartesianGrid strokeDasharray="3 3" />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="act_25" stroke="#8884d8" name="25th Percentile" />
-                <Line type="monotone" dataKey="act_50" stroke="#82ca9d" name="50th Percentile" />
-                <Line type="monotone" dataKey="act_75" stroke="#ffc658" name="75th Percentile" />
-              </LineChart>
-            </ResponsiveContainer>
-          </ChartContainer>
-          <Subtitle>Admitted SAT Scores</Subtitle>
-          <ChartContainer>
-            <ResponsiveContainer width="100%" height={200}>
-              <LineChart data={Object.values(data.t20)}>
-                <XAxis dataKey="year" />
-                <YAxis domain={[1360, 1600]} />
-                <CartesianGrid strokeDasharray="3 3" />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="sat_25" stroke="#8884d8" name="25th Percentile" />
-                <Line type="monotone" dataKey="sat_50" stroke="#82ca9d" name="50th Percentile" />
-                <Line type="monotone" dataKey="sat_75" stroke="#ffc658" name="75th Percentile" />
-              </LineChart>
-            </ResponsiveContainer>
-          </ChartContainer>
-          <Subtitle>Average Admitted GPA</Subtitle>
-          {data.t20[2024]?.avg_gpa ? (
-            <p><BoldNumber>{data.t20[2024].avg_gpa}</BoldNumber></p>
-          ) : (
-            <p>No GPA information provided</p>
-          )}
-        </Section>
-      </MiddleColumn>
-      <RightColumn>
-        <Section>
-          <Title>Waitlist Information</Title>
-          {waitlistData.length ? (
+      <ColumnsContainer>
+        <Column>
+          <Section>
+            <Title>Rankings</Title>
             <ChartContainer>
               <ResponsiveContainer width="100%" height={200}>
-                <LineChart data={waitlistData}>
+                <LineChart data={rankings}>
                   <XAxis dataKey="year" />
-                  <YAxis domain={[0, maxRate]} />
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <Tooltip formatter={(value, name, props) => `${props.payload.accepts}/${props.payload.offers}`} />
-                  <Legend />
-                  <Line type="monotone" dataKey="rate" stroke="#82ca9d" name="Waitlist Acceptance Rate (%)" />
-                </LineChart>
-              </ResponsiveContainer>
-            </ChartContainer>
-          ) : (
-            <p>No information regarding waitlists provided by this university.</p>
-          )}
-        </Section>
-        <Section>
-          <Title>Applicants Per Year</Title>
-          {applicantsData.length ? (
-            <ChartContainer>
-              <ResponsiveContainer width="100%" height={200}>
-                <LineChart data={applicantsData}>
-                  <XAxis dataKey="year" />
-                  <YAxis />
+                  <YAxis domain={[0, Math.max(...rankings.map(r => r.ranking)) + 3]} />
                   <CartesianGrid strokeDasharray="3 3" />
                   <Tooltip />
                   <Legend />
-                  <Line type="monotone" dataKey="men" stroke="#8884d8" name="Men Applicants" />
-                  <Line type="monotone" dataKey="women" stroke="#82ca9d" name="Women Applicants" />
+                  <Line type="monotone" dataKey="ranking" stroke="#007bff" />
                 </LineChart>
               </ResponsiveContainer>
             </ChartContainer>
-          ) : (
-            <p>No applicant information provided.</p>
-          )}
-        </Section>
-        <Section>
-          <Title>Acceptance Rate Per Year</Title>
-          {acceptanceRateData.length ? (
+          </Section>
+          <Section>
+            <Title>General Statistics</Title>
+            <p>Total Undergrads: <BoldNumber>{totalUndergrads.value}</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
+            <p>Acceptance Rate Men: <BoldNumber>{(acceptanceRateMen * 100).toFixed(2)}%</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
+            <p>Acceptance Rate Women: <BoldNumber>{(acceptanceRateWomen * 100).toFixed(2)}%</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
+            <p>Total Acceptance Rate: <BoldNumber>{(totalAcceptanceRate * 100).toFixed(2)}%</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
+            <p>Admit to Enroll Rate: <BoldNumber>{(admitToEnrollRate * 100).toFixed(2)}%</BoldNumber> {totalUndergrads.year && `(From ${totalUndergrads.year})`}</p>
+          </Section>
+        </Column>
+        <Column>
+          <Section>
+            <Title>Common Data Set Links</Title>
+            {data.t20[2022]?.link && <p><a href={data.t20[2022].link} target="_blank" rel="noopener noreferrer">2022</a></p>}
+            {data.t20[2023]?.link && <p><a href={data.t20[2023].link} target="_blank" rel="noopener noreferrer">2023</a></p>}
+            {data.t20[2024]?.link && <p><a href={data.t20[2024].link} target="_blank" rel="noopener noreferrer">2024</a></p>}
+          </Section>
+          <Section>
+            <Title>Admitted Student Statistics</Title>
+            <Subtitle>Admitted ACT Scores</Subtitle>
             <ChartContainer>
               <ResponsiveContainer width="100%" height={200}>
-                <LineChart data={acceptanceRateData}>
+                <LineChart data={Object.values(data.t20)}>
                   <XAxis dataKey="year" />
-                  <YAxis />
+                  <YAxis domain={[27, 36]} />
                   <CartesianGrid strokeDasharray="3 3" />
                   <Tooltip />
                   <Legend />
-                  <Line type="monotone" dataKey="totalAcceptanceRate" stroke="#ffc658" name="Acceptance Rate (%)" />
+                  <Line type="monotone" dataKey="act_25" stroke="#8884d8" name="25th Percentile" />
+                  <Line type="monotone" dataKey="act_50" stroke="#82ca9d" name="50th Percentile" />
+                  <Line type="monotone" dataKey="act_75" stroke="#ffc658" name="75th Percentile" />
                 </LineChart>
               </ResponsiveContainer>
             </ChartContainer>
-          ) : (
-            <p>No acceptance rate information provided.</p>
-          )}
-        </Section>
-      </RightColumn>
+            <Subtitle>Admitted SAT Scores</Subtitle>
+            <ChartContainer>
+              <ResponsiveContainer width="100%" height={200}>
+                <LineChart data={Object.values(data.t20)}>
+                  <XAxis dataKey="year" />
+                  <YAxis domain={[1360, 1600]} />
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <Tooltip />
+                  <Legend />
+                  <Line type="monotone" dataKey="sat_25" stroke="#8884d8" name="25th Percentile" />
+                  <Line type="monotone" dataKey="sat_50" stroke="#82ca9d" name="50th Percentile" />
+                  <Line type="monotone" dataKey="sat_75" stroke="#ffc658" name="75th Percentile" />
+                </LineChart>
+              </ResponsiveContainer>
+            </ChartContainer>
+            <Subtitle>Average Admitted GPA</Subtitle>
+            {data.t20[2024]?.avg_gpa ? (
+              <p><BoldNumber>{data.t20[2024].avg_gpa}</BoldNumber></p>
+            ) : (
+              <p>No GPA information provided</p>
+            )}
+          </Section>
+        </Column>
+        <Column>
+          <Section>
+            <Title>Waitlist Information</Title>
+            {waitlistData.length ? (
+              <ChartContainer>
+                <ResponsiveContainer width="100%" height={200}>
+                  <LineChart data={waitlistData}>
+                    <XAxis dataKey="year" />
+                    <YAxis domain={[0, maxRate]} />
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <Tooltip formatter={(value, name, props) => `${props.payload.accepts}/${props.payload.offers}`} />
+                    <Legend />
+                    <Line type="monotone" dataKey="rate" stroke="#82ca9d" name="Waitlist Acceptance Rate (%)" />
+                  </LineChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            ) : (
+              <p>No information regarding waitlists provided by this university.</p>
+            )}
+          </Section>
+          <Section>
+            <Title>Applicants Per Year</Title>
+            {applicantsData.length ? (
+              <ChartContainer>
+                <ResponsiveContainer width="100%" height={200}>
+                  <LineChart data={applicantsData}>
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="men" stroke="#8884d8" name="Men Applicants" />
+                    <Line type="monotone" dataKey="women" stroke="#82ca9d" name="Women Applicants" />
+                  </LineChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            ) : (
+              <p>No applicant information provided.</p>
+            )}
+          </Section>
+          <Section>
+            <Title>Acceptance Rate Per Year</Title>
+            {acceptanceRateData.length ? (
+              <ChartContainer>
+                <ResponsiveContainer width="100%" height={200}>
+                  <LineChart data={acceptanceRateData}>
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <Tooltip />
+                    <Legend />
+                    <Line type="monotone" dataKey="totalAcceptanceRate" stroke="#ffc658" name="Acceptance Rate (%)" />
+                  </LineChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            ) : (
+              <p>No acceptance rate information provided.</p>
+            )}
+          </Section>
+        </Column>
+      </ColumnsContainer>
     </Container>
   );
 };
