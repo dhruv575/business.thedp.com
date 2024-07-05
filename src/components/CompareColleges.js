@@ -8,7 +8,6 @@ import {
   PolarAngleAxis,
   PolarRadiusAxis,
   Tooltip,
-  Legend,
   ResponsiveContainer
 } from 'recharts';
 
@@ -285,7 +284,6 @@ const CompareColleges = () => {
   const radarDataWithScale = radarData.map((dataPoint) => {
     const metric = dataPoint.metric.toLowerCase().replace(/ /g, '_');
     const values = selectedUniversityData.map((uni) => parseFloat(uni[metric]));
-    const minValue = Math.min(...values);
     const maxValue = Math.max(...values);
     const scaledDataPoint = { metric: dataPoint.metric };
     selectedUniversityData.forEach((uni) => {

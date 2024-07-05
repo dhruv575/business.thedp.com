@@ -6,6 +6,7 @@ import styled from 'styled-components';
 import ContentGrid from '../components/hsGrid'
 import CollegeData from '../components/collegedata';
 import CompareColleges from '../components/CompareColleges';
+import StudentProfiles from '../components/StudentProfiles';
 
 import {
   Container
@@ -142,6 +143,7 @@ const PeakAtPenn = () => {
           <Button href="#newsletter">Join Our Newsletter</Button>
           <Button href="#data">Explore College Data</Button>
           <Button href="#compare">Compare Colleges</Button>
+          <Button href="#profiles">Admitted Student Profiles</Button>
         </ButtonContainer>
       </Hero>
       <SectionTitle id="data">COLLEGE DATA</SectionTitle>       
@@ -150,12 +152,19 @@ const PeakAtPenn = () => {
         <SectionTitle>COMPARE COLLEGES</SectionTitle>
         <CompareColleges />
       </FormatSection>
-      <SectionTitle id="newsletter"> OUR NEWSLETTER </SectionTitle>
-      <Title> 
-          Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and essays and profiles from current Penn students!
-      </Title>
-      <ContentGrid />
-      <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
+        <SectionTitle id="profiles">ADMITTED PROFILES</SectionTitle>
+        <StudentProfiles />
+        <Title> 
+          For access to more admitted profiles, subscribe to our newsletter! Our first edition will contain 4 more profiles and 1-2 more in every one after!
+        </Title>
+      <FormatSection>
+        <SectionTitle id="newsletter"> OUR NEWSLETTER </SectionTitle>
+        <Title> 
+            Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and essays and profiles from current Penn students!
+        </Title>
+        <ContentGrid />
+        <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
+      </FormatSection>
     </Container>
   )
 }
