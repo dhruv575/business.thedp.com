@@ -1,20 +1,21 @@
-import React from 'react'
-import s from 'styled-components'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import React, { useState } from 'react';
+import s from 'styled-components';
+import { useStaticQuery, graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import styled from 'styled-components';
-import ContentGrid from '../components/hsGrid'
+import ContentGrid from '../components/hsGrid';
 import CollegeData from '../components/collegedata';
 import CompareColleges from '../components/CompareColleges';
 import StudentProfiles from '../components/StudentProfiles';
+import SimilarColleges from '../components/SimilarColleges';
 
 import {
   Container
-} from '../components'
+} from '../components';
 import {
   POPPINS_SEMI_BOLD,
   POPPINS_LIGHT
-} from '../styles/fonts'
+} from '../styles/fonts';
 
 const Hero = s.div`
   text-align: center;
@@ -22,9 +23,8 @@ const Hero = s.div`
   ${POPPINS_SEMI_BOLD}
   padding-top: 3rem;
   padding-bottom: 1rem;
-  
-  background-color: #f2f2f2; // Change the background as needed
-  box-shadow: 0px 4px 4px rgba(0,0,0,0.5); // This adds a slight shadow for depth
+  background-color: #f2f2f2;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
 `;
 
 const ImageWrapper = s.div`
@@ -34,13 +34,13 @@ const ImageWrapper = s.div`
     padding: 1rem 1rem;
     text-align: center;
   }
-`
+`;
 
 const SubHead = s.p`
   margin-top: 1rem;
   font-size: 110%;
   color: maroon;
-`
+`;
 
 const ButtonContainer = styled.div`
   display: flex;
@@ -52,15 +52,17 @@ const ButtonContainer = styled.div`
   }
 `;
 
-const Button = styled.a`
+const Button = styled.button`
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: navy;
+  background-color: ${({ selected }) => (selected ? 'maroon' : 'navy')};
   color: white;
   font-size: 1rem;
   text-decoration: none;
+  border: none;
   border-radius: 5px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: scale(1.02);
@@ -82,41 +84,43 @@ const Title = styled.h2`
   @media screen and (max-width: 768px) {
     padding: 0rem 1rem;
   }
-`
+`;
 
 const FormatSection = s.section`
   padding: 0.5rem 2rem;
   padding-bottom: 2rem;
-  background-color: #f2f2f2; // Change the background as needed
+  background-color: #f2f2f2;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.5); // This adds a slight shadow for depth
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
   margin-top: 2rem;
 `;
 
 const SectionTitle = styled.h2`
-  font-family: 'Poppins', sans-serif; // Or any other font that fits your design
-  color: maroon; // Assuming white text fits the theme based on the screenshot
-  font-size: 2.5rem; // Larger font size for prominence
-  text-align: center; // Center-aligned text
+  font-family: 'Poppins', sans-serif;
+  color: maroon;
+  font-size: 2.5rem;
+  text-align: center;
   position: relative;
-  padding-bottom: .5rem; // Space for the underline
-  margin: 2rem; // More space below the title
+  padding-bottom: .5rem;
+  margin: 2rem;
 
   &::after {
     content: '';
-    width: 50%; // Width of the underline
+    width: 50%;
     position: absolute;
     bottom: 0;
-    left: 25%; // Center the underline
-    border-bottom: 3px solid navy; // A light green color for the underline to match the theme
+    left: 25%;
+    border-bottom: 3px solid navy;
   }
 
   @media (max-width: 768px) {
-    font-size: 1.5rem; // Smaller font size for mobile responsiveness
+    font-size: 1.5rem;
   }
 `;
 
 const PeakAtPenn = () => {
+  const [currentSection, setCurrentSection] = useState('newsletter');
+
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "peek.png" }) {
@@ -127,7 +131,7 @@ const PeakAtPenn = () => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Container title="Peek at Penn | ">
@@ -140,33 +144,57 @@ const PeakAtPenn = () => {
           Breaking into the Ivy League. Powered by the Ivy League.
         </SubHead>
         <ButtonContainer>
-          <Button href="#newsletter">Join Our Newsletter</Button>
-          <Button href="#data">Explore College Data</Button>
-          <Button href="#compare">Compare Colleges</Button>
-          <Button href="#profiles">Admitted Student Profiles</Button>
+          <Button selected={currentSection === 'newsletter'} onClick={() => setCurrentSection('newsletter')}>Join Our Newsletter</Button>
+          <Button selected={currentSection === 'data'} onClick={() => setCurrentSection('data')}>Explore College Data</Button>
+          <Button selected={currentSection === 'compare'} onClick={() => setCurrentSection('compare')}>Compare Colleges</Button>
+          <Button selected={currentSection === 'profiles'} onClick={() => setCurrentSection('profiles')}>Admitted Student Profiles</Button>
+          <Button selected={currentSection === 'similar'} onClick={() => setCurrentSection('similar')}>Find Similar Universities</Button>
         </ButtonContainer>
       </Hero>
-      <SectionTitle id="data">COLLEGE DATA</SectionTitle>       
-      <CollegeData />  
-      <FormatSection id="compare">
-        <SectionTitle>COMPARE COLLEGES</SectionTitle>
-        <CompareColleges />
-      </FormatSection>
-        <SectionTitle id="profiles">ADMITTED PROFILES</SectionTitle>
-        <StudentProfiles />
-        <Title> 
-          For access to more admitted profiles, subscribe to our newsletter! Our first edition will contain 4 more profiles and 1-2 more in every one after!
-        </Title>
-      <FormatSection>
-        <SectionTitle id="newsletter"> OUR NEWSLETTER </SectionTitle>
-        <Title> 
-            Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and essays and profiles from current Penn students!
-        </Title>
-        <ContentGrid />
-        <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
-      </FormatSection>
-    </Container>
-  )
-}
 
-export default PeakAtPenn
+      {currentSection === 'newsletter' && (
+        <FormatSection>
+          <SectionTitle id="newsletter">OUR NEWSLETTER</SectionTitle>
+          <Title>
+            Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and essays and profiles from current Penn students!
+          </Title>
+          <ContentGrid />
+          <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
+        </FormatSection>
+      )}
+
+      {currentSection === 'data' && (
+        <>
+          <SectionTitle id="data">COLLEGE DATA</SectionTitle>
+          <CollegeData />
+        </>
+      )}
+
+      {currentSection === 'compare' && (
+        <FormatSection id="compare">
+          <SectionTitle>COMPARE COLLEGES</SectionTitle>
+          <CompareColleges />
+        </FormatSection>
+      )}
+
+      {currentSection === 'profiles' && (
+        <>
+          <SectionTitle id="profiles">ADMITTED PROFILES</SectionTitle>
+          <StudentProfiles />
+          <Title>
+            For access to more admitted profiles, subscribe to our newsletter! Our first edition will contain 4 more profiles and 1-2 more in every one after!
+          </Title>
+        </>
+      )}
+
+      {currentSection === 'similar' && (
+        <>
+          <SectionTitle id="similar">Find Most Similar Colleges</SectionTitle>
+          <SimilarColleges />
+        </>
+      )}
+    </Container>
+  );
+};
+
+export default PeakAtPenn;

@@ -8,5 +8,10 @@
         "name": "Afore Capital",
         "img": "../images/partnerLogos/afore capital.jpg",
         "link": "https://www.afore.vc/"
+    },
+    {
+        "name": "Civilization Ventures",
+        "img": "../images/partnerLogos/civilization.jpg",
+        "link": "https://www.civilizationventures.com/"
     }
 ]
