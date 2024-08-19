@@ -153,14 +153,14 @@ const PeakAtPenn = () => {
       </Hero>
 
       {currentSection === 'newsletter' && (
-        <FormatSection>
+        <>
           <SectionTitle id="newsletter">OUR NEWSLETTER</SectionTitle>
           <Title>
             Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and essays and profiles from current Penn students!
           </Title>
           <ContentGrid />
           <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
-        </FormatSection>
+        </>
       )}
 
       {currentSection === 'data' && (
@@ -171,10 +171,10 @@ const PeakAtPenn = () => {
       )}
 
       {currentSection === 'compare' && (
-        <FormatSection id="compare">
-          <SectionTitle>COMPARE COLLEGES</SectionTitle>
+        <>
+          <SectionTitle id="compare">COMPARE COLLEGES</SectionTitle>
           <CompareColleges />
-        </FormatSection>
+        </>
       )}
 
       {currentSection === 'profiles' && (
