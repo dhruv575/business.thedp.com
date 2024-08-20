@@ -64,7 +64,10 @@ const JoinButton = styled.div`
     }
 
     @media (max-width: 768px) {
-        position: static;
+        position: fixed;
+        bottom: 20px;
+        right: 10%;
+        left: 10%;
         margin-top: 2rem;
     }
 `;
@@ -74,12 +77,15 @@ const Section = styled.section`
   h2 {
     font-size: 3rem;
   }
-  p {
-    font-size: 1rem;
+  h3 {
+    font-size: 1.5rem;
+    font-style: italic;
   }
-  padding: 2rem 15rem;
+  p {
+    font-size: 1.1rem;
+  }
+  padding: 2rem 18rem;
   text-align: center;
-  background-color: #f0f0f0; /* Non-repeating background color */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -120,8 +126,8 @@ const Tab = styled.button`
   }
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
-    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
     margin: 0.5rem 0.5rem;
   }
 `;
@@ -141,7 +147,7 @@ const Highlights = styled.ul`
     margin-bottom: 0.5rem;
 
     a {
-      color: #FFD700; /* Gold color for links */
+      color: inherit; /* Match link color to the rest of the section */
       text-decoration: none;
 
       &:hover {
@@ -186,30 +192,47 @@ const JoinPage = () => {
     if (group.departments.length === 1) {
       const department = group.departments[0];
       return (
-        <Section key={groupKey} style={{ background: department?.background, color: group.color }}>
+        <Section key={groupKey} style={{ 
+            background: department?.background, 
+            color: group.color,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat" 
+        }}>
           <h2>{department.department}</h2>
           <Content>
             {department?.text?.map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>
             ))}
-            <Highlights>
-              {department?.highlights?.map((highlight, idx) => (
-                <li key={idx}>
-                  <a href={department?.highlightLinks[idx]} target="_blank" rel="noopener noreferrer">
-                    {highlight}
-                  </a>
-                </li>
-              ))}
-            </Highlights>
+            {department?.highlights && department.highlights.length > 0 && (
+              <>
+                <h3>Highlights</h3>
+                <Highlights>
+                  {department?.highlights?.map((highlight, idx) => (
+                    <li key={idx}>
+                      <a href={department?.highlightLinks[idx]} target="_blank" rel="noopener noreferrer">
+                        {highlight}
+                      </a>
+                    </li>
+                  ))}
+                </Highlights>
+              </>
+            )}
           </Content>
         </Section>
       );
     } else {
       // Assign unique background colors for each tab
-      const tabBackgrounds = ['#F0F8FF', '#F5F5F5', '#FFEFD5', '#F0FFF0', '#F0FFFF', '#F5F5DC'];
+      const tabBackgrounds = ['#FFF', '#FFF', '#FFF', '#FFF', '#FFF', '#FFF'];
 
       return (
-        <Section key={groupKey} style={{ background: selectedDepartment?.background, color: group.color }}>
+        <Section key={groupKey} style={{ 
+            background: selectedDepartment?.background, 
+            color: group.color,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat" 
+        }}>          
           <h2>{group.group}</h2>
           <p>{group.description}</p>
           <Tabs>
@@ -228,15 +251,20 @@ const JoinPage = () => {
             {selectedDepartment?.text?.map((paragraph, idx) => (
               <p key={idx}>{paragraph}</p>
             ))}
-            <Highlights>
-              {selectedDepartment?.highlights?.map((highlight, idx) => (
-                <li key={idx}>
-                  <a href={selectedDepartment?.highlightLinks[idx]} target="_blank" rel="noopener noreferrer">
-                    {highlight}
-                  </a>
-                </li>
-              ))}
-            </Highlights>
+            {selectedDepartment?.highlights && selectedDepartment.highlights.length > 0 && (
+              <>
+                <h3>Highlights</h3>
+                <Highlights>
+                  {selectedDepartment?.highlights?.map((highlight, idx) => (
+                    <li key={idx}>
+                      <a href={selectedDepartment?.highlightLinks[idx]} target="_blank" rel="noopener noreferrer">
+                        {highlight}
+                      </a>
+                    </li>
+                  ))}
+                </Highlights>
+              </>
+            )}
           </Content>
         </Section>
       );
