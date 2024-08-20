@@ -19,27 +19,43 @@ const TopBar = s.div`
   justify-content: center;
   align-items: center;
   background-color: #000000; /* Adjust the background color as needed */
-  
+`;
+
+const ImageContainer = s.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
   @media (max-width: 768px) {
-    justify-content: center; /* Center the DP logo */
+    justify-content: center;
+    a:not(:nth-child(2)) {
+      display: none;
+    }
   }
 `;
 
 const ImageLink = s.a`
-  margin: 0 1rem; /* Spacing between images */
-  
+  margin: 0rem 1rem;
   img {
-    width: 12rem; /* Adjust image height */
-    display: block;
+    height: 1.25rem; /* Adjust image height */
   }
 `;
 
 export const ContainerJoin = ({ children, title }) => (
   <Wrapper>
     <TopBar>
-      <ImageLink href="https://www.thedp.com/" target="_blank" rel="noopener noreferrer">
-        <img src={dp} alt="The Daily Pennsylvanian" />
-      </ImageLink>
+      <ImageContainer>
+        <ImageLink href="https://www.thedp.com/" target="_blank" rel="noopener noreferrer">
+          <img src={utb} alt="The Daily Pennsylvanian" />
+        </ImageLink>
+        <ImageLink href="https://www.thedp.com/" target="_blank" rel="noopener noreferrer">
+          <img src={dp} alt="The Daily Pennsylvanian" />
+        </ImageLink>
+        <ImageLink href="https://www.thedp.com/" target="_blank" rel="noopener noreferrer">
+          <img src={street} alt="The Daily Pennsylvanian" />
+        </ImageLink>
+      </ImageContainer>
     </TopBar>
     <Header title={title} />
     {children}

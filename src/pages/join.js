@@ -101,7 +101,7 @@ const Tabs = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Wrap tabs to multiple rows on smaller screens */
-  margin: 1rem 0.5rem;
+  margin: 0rem 0.5rem;
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -110,7 +110,7 @@ const Tabs = styled.div`
 
 const Tab = styled.button`
   padding: 0.5rem 1rem;
-  margin: 0 0.5rem;
+  margin: 0.5rem 0.5rem;
   background: rgba(255, 255, 255, 0.3);
   border: none;
   border-radius: 5px;
