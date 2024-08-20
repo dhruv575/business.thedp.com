@@ -1,0 +1,402 @@
+[
+    {
+        "group": "Editorial",
+        "description": "",
+        "departments": [
+            {
+              "department": "News",
+              "text": [
+                "As a reporter for the News Department, you will be able to involve yourself in many of the most pressing issues at Penn and in the Philadelphia community. Writing for News allows you to enact change on campus, hold institutions accountable, and understand the intricacies of student life and University operations. You will learn not only how to report and investigate stories relevant to the Penn community, but also many key skills transferable to other careers.",
+                "During a year of unprecedented campus turmoil, the News Department extensively covered student activism, administrative turnover, local politics, and much more. By joining News, you’ll have the opportunity to develop expertise in and report directly on the subjects that most interest you.",
+                "Follow in the footsteps of DP News alumni who work for top publications and companies like the New York Times, The Washington Post, Forbes, Vox, MTV, Politico and The Wall Street Journal — in addition to various former DPers practicing law and working in business.",
+                "No journalistic experience required — only curiosity and dedication."
+              ],
+              "highlights": [
+                "Penn President Liz Magill resigns amid backlash over antisemitism controversies",
+                "From clinician to caretaker president: How Larry Jameson rose to Penn's top job",
+                "Police in riot gear arrest 33 protesters, including Penn students, at Gaza Solidarity Encampment",
+                "Here are Pennsylvania’s 2024 primary results — and how Penn differed from the rest of the state",
+                "Penn releases regular decision results for Class of 2028 after another record-breaking cycle"
+              ],
+              "highlightLinks": [
+                "https://www.thedp.com/article/2023/12/penn-president-liz-magill-resigns",
+                "https://www.thedp.com/article/2023/12/penn-larry-jameson-interim-president",
+                "https://www.thedp.com/article/2024/05/penn-palestine-gaza-protests-arrests",
+                "https://www.thedp.com/article/2024/04/penn-primary-election-2024-results-turnout-voting",
+                "https://www.thedp.com/article/2024/03/penn-regular-decision-results-class-of-2028"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/917417c6-2a39-487a-bd75-8913f3427445.sized-1000x1000.jpg')",
+              "id": "news"
+            },
+            {
+              "department": "Sports",
+              "text": [
+                "Sports are about passion — the ability to risk it all, to become emotionally invested, to be a part of a team, and to test the limits of what you’re capable of. DP Sports provides the structure and guidance you need to explore that passion.",
+                "Our department is a place where anyone can feel welcome and be a part of the family. We spend valuable time with each and every person on our team to ensure that they can sharpen their storytelling and investigative skills. We’re a team, and we have an amazing time going on road trips, throwing watch parties, and getting immersed in the sports we cover and watch.",
+                "So if you like watching, playing, reading, writing, talking, photographing, or learning about sports, DP Sports is totally the place for you. No experience necessary; absolutely anyone is welcome to join!"
+              ],
+              "highlights": [
+                "'Just shattered': Penn lightweight rowing accused of racism, prompting controversial University response",
+                "Unpacking the best nicknames in Penn sports",
+                "The numbers making up Penn football's attendance over the past 20 years",
+                "Pandemonium at the Palestra: Penn men's basketball stuns No. 21 Villanova 76-72",
+                "All eyes on Fallon: Inside the junior's journey to becoming a 2024 U.S. Olympic hopeful"
+              ],
+              "highlightLinks": [
+                "https://www.thedp.com/article/2024/04/penn-rowing-racism-allegations-lightweight-sports-athletics",
+                "https://www.thedp.com/article/2024/04/penn-sports-nicknames-baseball-ryan-dromboski-chloe-lesko-sam-sullivan-julien-stokes",
+                "https://www.thedp.com/article/2023/11/penn-football-attendance-decline-two-decade-analysis-data",
+                "https://www.thedp.com/article/2023/11/penn-mens-basketball-villanova-big-5-palestra-home-philadephia",
+                "https://www.thedp.com/article/2023/11/penn-swimming-matt-fallon-feature-profile-olympic-mens"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.9), rgba(170, 30, 34, 0.9)), url('https://snworksceo.imgix.net/dpn/cec0e468-8fd7-4820-906d-9981ae887347.sized-1000x1000.jpg')",
+              "id": "sports"
+            },
+            {
+              "department": "Opinion",
+              "text": [
+                "You have the power to decide what the campus conversation ought to be.",
+                "At The Daily Pennsylvanian, we are looking for creative, passionate, and hard-working writers to pen columns for Penn's independent student-led news organization. We are also looking for talented artists to create funny, insightful, and poignant cartoons.",
+                "Your writing and reporting skills will improve tremendously, you will have the rare opportunity to reach thousands of people with every column you write, and you will learn to make this award-winning media organization your home. Opinion columns often garner the most page views of all DP sections, and columnists are known around campus. Being an opinion artist requires time and dedication, as well as the ability to make a point using few words.",
+                "Make conversation, stimulate change, and hold organizations and people accountable. Join us."
+              ],
+              "highlights": [
+                "Liala Sofi & Allison Santa-Cruz | We believe you, Mackenzie, and Penn’s administration should, too",
+                "Sam Zou | When institutions cheat, they get a pass",
+                "Lexi Boccuzzi | Is meeting Mr. Right at Penn all wrong?",
+                "Yomi Abdi | White Boys' Town",
+                "Vinay Khosla | Penn’s privilege dilemma",
+                "Riane Lumer | We must hold celebrities accountable for antisemitism"
+              ],
+              "highlightLinks": [
+                "https://www.thedp.com/article/2022/04/we-believe-mackenzie-fierceton-upenn",
+                "https://www.thedp.com/article/2022/07/college-rankings-columbia-inaccuracies-irresponsibility",
+                "https://www.thedp.com/article/2022/02/how-hook-up-culture-jeopardizes-romance",
+                "https://www.thedp.com/article/2022/04/daily-penn-exclusion-history",
+                "https://www.thedp.com/article/2022/04/penn-customer-service-privilege",
+                "https://www.thedp.com/article/2022/12/hold-celebrities-accountable-for-antisemitism"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.9), rgba(170, 30, 34, 0.9)), url('https://snworksceo.imgix.net/dpn/63f97845-7cb5-49eb-8322-bca5667583bc.sized-1000x1000.jpg')",
+              "id": "opinion"
+            },
+            {
+              "department": "Copy",
+              "text": [
+                "The Daily Pennsylvanian’s Copy Department is now editing 34th Street, Under the Button, and DP Sports content! Join our super fun team in reviewing and fact-checking everything from breaking news to satirical videos to social media captions. Come help us keep our content concise, consistent, and considerate.",
+                "From the people who brought the DP the Oxford comma."
+              ],
+              "highlights": ["The DP's Official Style Guide"],
+              "highlightLinks": [
+                "https://docs.google.com/document/pub?id=14HoU_sCiPxD8SOSH8HvWKsvz1Elv89yzcje-sZGGahs&pli=1"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/9a678efe-73b0-4fed-9f63-2278da389db8.sized-1000x1000.jpg')",
+              "id": "copy"
+            },
+            {
+              "department": "Multimedia",
+              "text": [
+                "As a member of the Multimedia Department, you will learn how to create engaging visual storytelling content, have the opportunity to cover historic events on campus and throughout the country, and take part in the editing and publishing processes.",
+                "In 2023, our staff notably covered student activism, administrative turmoil, city elections, and much more. Our photographers traveled around Philadelphia and up and down the coast to document a United States House committee hearing with the former Penn and Harvard presidents, U.S. President Joe Biden’s multiple visits to campus, and our basketball team’s historic upset over Villanova.",
+                "We use the Adobe Creative Suite, as well as high-quality cameras, lenses, and audio and video equipment. No experience with photography or videography is necessary, and no personal equipment is required. Join us in making transformative content for an award-winning media company!"
+              ],
+              "highlights": [
+                "In Photos: President Joe Biden visits Philadelphia",
+                "Penn Students Protest for RA Union Recognition",
+                "In Photos: Liz Magill’s 16-month presidency, from confirmation to resignation",
+                "Pros vs Joes with Matt Fallon",
+                "In Photos: Penn men's basketball trumps Villanova in historic upset",
+                "Penn Men’s Basketball vs. Villanova –– In 60 Seconds",
+                "10 Questions with Bella Whittaker and Liv Morganti",
+                "In Photos: 2023",
+                "Meet the DP!"
+              ],
+              "highlightLinks": [
+                "https://www.thedp.com/article/2023/02/president-biden-philadelphia-visit-dnc-photo-essay",
+                "https://www.youtube.com/watch?v=vfFLs5CnIhk",
+                "https://www.thedp.com/article/2023/12/liz-magill-presidency-resignation-photo-essay",
+                "https://www.youtube.com/watch?v=XzBWXcnEOg4&t=132s",
+                "https://www.thedp.com/article/2023/11/mens-basketball-villanova-win-photo-essay",
+                "https://www.instagram.com/reel/Cz6trZUrD5Y/",
+                "https://www.instagram.com/reel/C5WX0tTg-he/",
+                "https://www.thedp.com/article/2023/12/2023-year-in-photos-essay",
+                "https://www.instagram.com/reel/C2f74m4upFI/"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://media.giphy.com/media/KHKlf5Cnvzm1HDkVrL/giphy.gif')",
+              "id": "multimedia"
+            },
+            {
+              "department": "Design",
+              "text": [
+                "The Design Department is looking for designers, artists, and illustrators with all ranges of experience to join us in producing The Daily Pennsylvanian and 34th Street Magazine’s print and online visual content.",
+                "We use the full Adobe Creative Suite—mainly Photoshop, Illustrator, and InDesign—along with various online platforms for data visualization.",
+                "If you are interested in creating aesthetic content, whether it be front-page print centerpieces, online graphics, or layouts for print/websites, then Design is for you!"
+              ],
+              "highlights": [
+                "DP Design Showcase: 2022",
+                "The Daily Pennsylvanian Print Layouts",
+                "34th Street Magazine Print Layouts"
+              ],
+              "highlightLinks": [
+                "https://www.thedp.com/article/2022/12/dp-design-showcase-2022-penn",
+                "https://issuu.com/dailypenn",
+                "https://issuu.com/34st"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/90337c0f-5064-4457-917f-c728ffcf8e58.sized-1000x1000.jpg')",
+              "id": "design"
+            },
+            {
+              "department": "Social Media",
+              "text": [
+                "Joining the Social Media team will put you on the frontline of the DP’s interaction with tens of thousands of readers and develop skills increasingly relevant in the world’s growing digital landscape.",
+                "As a rapidly growing department, we are looking for people excited to curate, manage, and develop the DP’s social media presence and interaction through Facebook, Twitter and (especially!) Instagram. This year, we have created many opportunities under social media to work with Analytics in analyzing social media department, to work with Marketing to create digital marketing campaigns, and to work with the News, Sports, and Opinion departments to translate their stories into engaging digital content.",
+                "Social Media is the right department for anyone looking to work with other departments across the DP on exciting projects such as promotion strategies for special issues and events online.",
+                "No prior experience required for the social media and newsletter division — only a fire emoji game and willingness to be part of our close knit family. Familiarity with Adobe Illustrator is a plus but definitely not required."
+              ],
+              "highlights": [
+                "The Daily Pennsylvanian Facebook",
+                "The Daily Pennsylvanian Twitter",
+                "DP Sports Twitter",
+                "The Daily Pennsylvanian Instagram"
+              ],
+              "highlightLinks": [
+                "https://www.facebook.com/dailypenn",
+                "https://twitter.com/dailypenn",
+                "https://twitter.com/dailypennsports",
+                "https://www.instagram.com/dailypenn/"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/4c31d16d-8363-41df-80a0-a5564b011215.sized-1000x1000.jpg')",
+              "id": "social"
+            },
+            {
+              "department": "Podcasts",
+              "text": [
+                "Calling all podcast enthusiasts! DP Podcasts is looking for new storytellers, hosts, writers, editors, and assistants! Those looking to edit podcasts or learn the behind the scenes process are especially welcomed by our hosts. Join this burgeoning department as we attempt to expand the breadth and depth of our current podcast offerings. We are looking for storytellers and commentators from diverse backgrounds.",
+                "Are you weirdly passionate about something on campus? Do you have interesting opinions? If you join our department, we can turn that into a podcast!"
+              ],
+              "highlights": [
+                "Quaker Nation: Penn men's basketball's Tyler Perkins joins the show",
+                "Penn Daily: Monday, Nov. 13th briefing",
+                "Breaking Bread: Season 2, Episode 4 Shreya Sharma",
+                "Penn(y) For Your Thoughts S1E3: Social Media Activism"
+              ],
+              "highlightLinks": [
+                "https://www.thedp.com/multimedia/9da64a7d-3013-4b5a-95e1-8937b3066423",
+                "https://www.thedp.com/multimedia/8a60a097-7b85-4862-95d1-9600a062071a",
+                "https://www.thedp.com/multimedia/b108dd4c-a98a-4e0e-ae16-b926686eb1d3",
+                "https://www.thedp.com/multimedia/a6f357ee-8b80-44d0-b390-55e8b982e85d"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/51d7e036-6b77-402a-9d6d-b1f7b8c3ab8c.sized-1000x1000.jpg')",
+              "id": "podcasts"
+            },
+            {
+              "department": "Puzzles",
+              "text": [
+                "Originally founded as Crosswords in January 2023, Puzzles is the newest department at the DP. Our team collaboratively constructs both mini and full-size crosswords, along with the more recent introduction of three brand-new puzzles for the fall: Strands, Password, and News Quiz — published in print and online on a daily basis.",
+                "Our student-produced crosswords have become a smash hit across the Penn community, with nearly 117,000 total plays across our 200+ mini and standard crosswords. With our department’s expansion this fall, we hope to amplify this success as we begin to bring new puzzles to our readers. We view our puzzles as a uniquely creative journalistic endeavor, one that allows us to engage and inform our community in new and exciting ways while bringing people together.",
+                "We invite you now to peruse our existing selection of puzzles on the DP website, and we hope that you’ll consider applying to join the team — we can’t wait to have you. No experience required!"
+              ],
+              "highlights": [
+                "DP Crosswords"
+              ],
+              "highlightLinks": [
+                "https://www.thedp.com/section/crosswords"
+              ],
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8))",
+              "id": "puzzles"
+            }
+          ]          
+    },
+    {
+        "group": "Business",
+        "description": "",
+        "departments": [
+            {
+              "department": "Strategy & Promotions",
+              "text": [
+                "DP Strategy & Promotions develops and enhances the unique brand identity of The Daily Pennsylvanian Inc., a $3 million dollar business. Functioning as the company’s in-house strategic consulting arm, our associates collaborate heavily with the DP, 34th Street Magazine, and UTB to further brand, market, and drive growth in all their core editorial products.",
+                "S&P is the perfect place to develop your creativity and sharpen your business skills as all our projects require a good mix of both. If you’re interested in all things strategy consulting, product marketing, data-driven storytelling, or fostering “consumer” relationships, we want you to join our team that ensures our content is reaching the right audience at the right time.",
+                "No prior experience is required — just a willingness to learn and readiness to take ownership over the health and success of a project. You will have the unique opportunity to gain real-world business experience and work alongside an inspiring, fun group of people."
+              ],
+              "background": "linear-gradient(rgba(238, 238, 238, 0.9), rgba(238, 238, 238, 0.9)), url('https://snworksceo.imgix.net/dpn/5803b1e8-72a6-4810-9770-60123f4a066d.sized-1000x1000.jpg')",
+              "id": "strategy"
+            },
+            {
+              "department": "Accounting & Finance",
+              "text": [
+                "You can study the theory of finance in Wharton, but the DP gives you an ideal business laboratory and the money is real. As a member of our accounting & finance team you will be responsible for overseeing the finance and accounting functions of the Daily Pennsylvanian, Inc.",
+                "\u2022 Analyze and advise on investments",
+                "\u2022 Prepare monthly financial statements",
+                "\u2022 Design effective budget models for the entire company including reviewing budget request, forecasting future needs and making presentations to the Board of Directors.",
+                "\u2022 Analyze financial information (revenues, expenditures & cash management) to ensure all operations are within budget",
+                "\u2022 Identify variances between actual and budgeted financial results at the end of each reporting period",
+                "\u2022 Suggest spending improvements that increase profits",
+                "\u2022 Assist with all accounts payable and accounts receivable functions",
+                "\u2022 Process bi-weeklly payroll",
+                "\u2022 Suggest spending improvements that increase profits"
+              ],
+              "highlights": [],
+              "highlightLinks": [],
+              "background": "linear-gradient(rgba(238, 238, 238, 0.9), rgba(238, 238, 238, 0.9)), url('https://cf.ltkcdn.net/antiques/images/orig/226165-2121x1414-Antique-cash-register.jpg')",
+              "id": "finance"
+            },
+            {
+              "department": "Consulting",
+              "text": [
+                "Consulting analysts source potential clients, develop strategic marketing campaigns, and produce pitch materials for client presentations. The Consulting team works to build relationships with local businesses post-pandemic and pursues new, innovative streams of revenue generation. By working with our outstanding business teams, DP consultants will learn to use creative problem solving and analytical skills to help our clients successfully reach the Penn community. The consulting team promotes quick thinking and strong teamwork."
+              ],
+              "highlights": [],
+              "highlightLinks": [],
+              "background": "linear-gradient(rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.8)), url('https://snworksceo.imgix.net/dpn/7f265244-68c1-4483-b138-8fc49c343444.sized-1000x1000.jpg')",
+              "id": "consulting"
+            },
+            {
+              "department": "Innovation Lab",
+              "text": [
+                "The Innovation Lab team is responsible for all research and development of new revenue sources including new products, services and events. Innovation Lab members will be tasked with assessing new ideas from within the organization, sourcing and building new revenue-building products for the Daily Pennsylvanian, and fleshing out any approved new products and ventures.",
+                "The Daily Pennsylvanian’s Innovation Lab offers the perfect opportunity to gain skills in market research and entrepreneurship, being tasked with creating projects with the potential to generate tens of thousands of dollars in revenue per year. As a fully-fledged business, the DP offers a unique experience on campus, and if you have any interest in these fields, consider joining our team!"
+              ],
+              "background": "linear-gradient(rgba(238, 238, 238, 0.8), rgba(238, 238, 238, 0.8)), url('https://snworksceo.imgix.net/dpn/af307706-8ed7-4389-bb37-283cdb2af2d0.sized-1000x1000.jpg')",
+              "id": "product-lab"
+            },
+            {
+                "department": "Analytics",
+                "text": [
+                  "DP Analytics is the data science and business analytics hub of the Daily Pennsylvanian. In Analytics, we seek to leverage modern tools and technologies to enhance the digital and data analytics capabilities of the DP.",
+                  "Analytics staffers collaborate with departments including Strategy & Promotion, Innovation Lab, Social Media, and Editorial to provide valuable insights and drive key decisions on the DP’s core projects and products.",
+                  "Members of the team will have the option to work in programming oriented roles such as developing content recommendation engines and automated metrics dashboard, as well as other technical roles like conducting A/B testing, surveys and drawing insights from industry tools like Google Analytics, Firebase and MailChimp.",
+                  "Whether it is building detailed and interactive visualizations on Python, developing algorithms to analyze popular article topics, or working with various teams to drive growth in the DP’s business initiatives, DP Analytics staffers work on projects with direct impact on the DP, the Penn community, and a global readership audience. Apply today!"
+                ],
+                "highlights": [
+                  "ML Driven Content Based Recommendation Engine"
+                ],
+                "highlightLinks": [
+                  "https://github.com/dailypenn/content-recommendation"
+                ],
+                "background": "linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 0, 255, 0.4)), url('https://snworksceo.imgix.net/dpn/68726eb4-7df0-4e26-9d83-3ad542d33846.sized-1000x1000.jpg')",
+                "id": "analytics",
+                "apply-link": "https://docs.google.com/forms/d/e/1FAIpQLSe1FXakAnYpuk5vsujwN9mLCdzdYlay_Hx_Qu3wKEDbQDdYoA/viewform"
+              }
+          ]          
+    },
+    {
+        "group": "DIS",
+        "description": "",
+        "departments": [
+            {
+              "department": "Diversity, Inclusion, and Standards",
+              "text": [
+                "The Diversity, Inclusion, and Standards Department is a reflection of the paper's commitment to progress. This department aims to ensure that the DP reflects the variety of voices on campus and fosters an inclusive and welcoming newsroom community. The DIS department will also ensure that all members of the DP uphold and represent the standards of the Daily Pennsylvanian, Inc.",
+                "The DIS department has two unique focuses: diversity and inclusion, and standards. Within diversity and inclusion focus, the department seeks to amplify underrepresented voices and perspectives, both in the company’s staff composition and in the stories we tell. It also aims to foster a work culture where every employee feels heard, valued, and empowered.",
+                "Within standards, the department will create and host training sessions for DP staffers and ensure that the DP has clear policies and standards for its members.",
+                "Key DIS projects including expanding on our diversity training and working on our annual diversity report.",
+                "No prior experience required! Join us to work on projects aimed at improving the DP’s company culture and making connections with other organizations on campus."
+              ],
+              "highlights": [],
+              "highlightLinks": [],
+              "background": "linear-gradient(rgba(34, 34, 34, 0.8), rgba(34, 0, 255, 0.4)), url('https://snworksceo.imgix.net/dpn/68726eb4-7df0-4e26-9d83-3ad542d33846.sized-1000x1000.jpg')",
+              "id": "dis",
+              "apply-link": "https://docs.google.com/forms/d/e/1FAIpQLSe1FXakAnYpuk5vsujwN9mLCdzdYlay_Hx_Qu3wKEDbQDdYoA/viewform"
+            }
+          ]        
+    },
+    {
+        "group": "Institutional Advanvement",
+        "description": "",
+        "departments": [
+            {
+              "department": "Institutional Advancement",
+              "text": [
+                "Working with an early-stage organization is an exciting opportunity to make real-world impacts while gaining professional experience in nonprofit management, social entrepreneurship and organizational development.",
+                "\u2022 Alumni Engagement: Build and maintain relationships with a portfolio of alumni donors through personalized outreach, volunteer assistance, events, fundraising campaigns, and stewardship activities. Manage and utilize records of interactions in the donor database.",
+                "\u2022 Institutional Giving: Identify and research potential institutional partners aligned with the Foundation's objectives. Craft tailored grant proposals, applications, and reports to secure funding for key initiatives. Cultivate and nurture relationships with a community of institutional donors."
+              ],
+              "signup": "https://docs.google.com/forms/d/e/1FAIpQLSe1FXakAnYpuk5vsujwN9mLCdzdYlay_Hx_Qu3wKEDbQDdYoA/viewform",
+              "highlights": [
+                "The DP Alumni Association",
+                "DP Futures Capital Campaign",
+                "#GivingTuesday",
+                "2023 Annual Report",
+                "Masthead Madness"
+              ],
+              "highlightLinks": [
+                "https://dailypennalumni.com/",
+                "https://www.dailypennalumni.com/dp-futures",
+                "https://www.classy.org/campaign/shine-a-light/c540107",
+                "https://www.dailypennalumni.com/2023report",
+                "https://www.mastheadmadness.com/"
+              ]
+            }, 
+            {
+              "department": "Media & Technology",
+              "text": [
+                "The DP Foundation is a valuable training ground for students seeking to strengthen their portfolios with diverse, impactful deliverables. We are looking for innovative thinkers willing to take initiative in helping build the organization’s projects, platforms and identity.",
+                "\u2022 Content Management: Create, improve and maintain content (using tools such as Adobe InDesign, Illustrator, and Photoshop) to achieve organizational goals, including but not limited to: campaign material, reports, social media content streams, and alumni newsletter. Develop the DP Foundation’s visual branding.",
+                "\u2022 Web Development: Communicate the DP’s legacy and encourage giving by building and maintaining web platforms: namely the DP Alumni Association site and fundraising campaign pages. Boost campaign outcomes through web analytics and user experience considerations."
+              ],
+              "signup": "https://docs.google.com/forms/d/e/1FAIpQLSe1FXakAnYpuk5vsujwN9mLCdzdYlay_Hx_Qu3wKEDbQDdYoA/viewform",
+              "highlights": [
+                "The DP Alumni Association",
+                "DP Futures Capital Campaign",
+                "#GivingTuesday",
+                "2023 Annual Report",
+                "Masthead Madness"
+              ],
+              "highlightLinks": [
+                "https://dailypennalumni.com/",
+                "https://www.dailypennalumni.com/dp-futures",
+                "https://www.classy.org/campaign/shine-a-light/c540107",
+                "https://www.dailypennalumni.com/2023report",
+                "https://www.mastheadmadness.com/"
+              ]
+            }
+          ]          
+    },
+    {
+        "group": "UTB",
+        "description": "",
+        "departments": [
+            {
+                "department": "Under the Button",
+                "text": [
+                    "Under the Button is Penn’s go-to source for daily humor and satire.",
+                    "Our writing staff works around the clock to report on the stories that other media organizations wouldn’t dare touch due to editorial standards. Our video and media staff work to capture the real Penn experience through the lens of a camera we stole from the DP. ",
+                    "We are looking for talented writers, videographers, actors, graphic designers, coders, our dignity, ten gay rats, and your best brisket recipe. If you’re an all-around funny person looking for a way to subject the rest of campus to your sense of humor, we’re the publication for you."
+                ],
+                "signup": "https://docs.google.com/forms/d/e/1FAIpQLSe1FXakAnYpuk5vsujwN9mLCdzdYlay_Hx_Qu3wKEDbQDdYoA/viewform",
+                "Check us out on Instagram": "https://www.instagram.com/underthebutton/"
+            }              
+        ]
+    },
+    {
+        "group": "34th Street",
+        "description": "",
+        "departments": [
+            {
+                "department": "34th Street Magazine",
+                "text": [
+                  "34th Street Magazine is your authority on Penn student life. We are a student magazine that empowers student voices, sheds light on student issues, and provides timely commentary on the arts and campus culture. We provide endless opportunities for a creative outlet: you can write cover stories, help envision marketing campaigns, design and lay out issues, attend press movie screenings, review top-rated restaurants, and even pitch your own content ideas.",
+                  "As the hub for Penn voices and narrative, Street staffers cover arts, culture, and feature content. We are looking for writers, photographers, videographers, artists, and social media whizzes to create, package, and promote Street to the Penn audience. Writers can work for our Features, Focus, Style, Arts, Film & TV, Music, or Ego sections. Multimedia staffers work with either the Photo or Video departments. Illustrators and graphic designers create visuals, including our weekly print product, as part of the Design department. Social Media associates manage our social media and our newsletter, The Toast.",
+                  "Street provides writers the opportunity to be creative in their pursuit of journalism, teaches Social Media staff how to build and promote a brand online, and gives photographers, videographers, and illustrators experience in creating engaging editorial visuals. Join Street to be part of a tight–knit community and learn from some of the most interesting and dedicated people at Penn—we promise you won’t regret it."
+                ],
+                "signup": "https://docs.google.com/forms/d/e/1FAIpQLSe1FXakAnYpuk5vsujwN9mLCdzdYlay_Hx_Qu3wKEDbQDdYoA/viewform",
+                "highlights": [
+                  "Dispatches from Isolation",
+                  "The Mormon Mommy Meltdown, Explained",
+                  "Sometimes a Fantasy, Sometimes the Real Thing: In Conversation with Soccer Mommy",
+                  "‘Can I Touch You There?’: Inside Hollywood’s Intimacy Coordination Boom",
+                  "Get to Know Penn's Oldest Stone(r)s",
+                  "Projects at 34th Street"
+                ],
+                "highlightLinks": [
+                  "https://projects.34st.com/2022/isolation/",
+                  "https://www.34st.com/article/2022/06/mormon-mommy-meltdown-blogging-taylor-frankie-paul-tik-tok-instagram-motherhood-reality",
+                  "https://www.34st.com/article/2022/11/soccer-mommy-sophie-allison-interview-sometimes-forever-oneohtrix-point-never-fantasy-clean",
+                  "https://www.34st.com/article/2022/10/intimacy-coordinator-hollywood-sex-scene-metoo",
+                  "https://www.34st.com/article/2022/03/penn-gargoyles-bosses-sculpture-history-quad",
+                  "https://projects.34st.com/"
+                ]
+            }
+              
+        ]
+    }
+]
