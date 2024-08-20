@@ -2,7 +2,7 @@
     {
         "group": "Business",
         "color": "#000",
-        "description": "The Daily Pennsylvanian is a $3-million, student-run media organization. Our incredible teams work together to market our products and sustain our business. Through the DP, students experience working for a real company, with real staffers, clients, and revenues. Join one of our teams to gain an invaluable, hands-on experience unlike any other.",
+        "description": "The Daily Pennsylvanian is a $3-million, student-run media organization. Our incredible teams work together to develop our products and sustain our business. Through the DP, students experience working for a real company, with real staffers, clients, and revenues. Join one of our teams to gain an invaluable, hands-on experience unlike any other.",
         "departments": [
             {
               "department": "Strategy & Promotions",
@@ -17,16 +17,9 @@
             {
               "department": "Accounting & Finance",
               "text": [
-                "You can study the theory of finance in Wharton, but the DP gives you an ideal business laboratory and the money is real. As a member of our accounting & finance team you will be responsible for overseeing the finance and accounting functions of the Daily Pennsylvanian, Inc.",
-                "\u2022 Analyze and advise on investments",
-                "\u2022 Prepare monthly financial statements",
-                "\u2022 Design effective budget models for the entire company including reviewing budget request, forecasting future needs and making presentations to the Board of Directors.",
-                "\u2022 Analyze financial information (revenues, expenditures & cash management) to ensure all operations are within budget",
-                "\u2022 Identify variances between actual and budgeted financial results at the end of each reporting period",
-                "\u2022 Suggest spending improvements that increase profits",
-                "\u2022 Assist with all accounts payable and accounts receivable functions",
-                "\u2022 Process bi-weeklly payroll",
-                "\u2022 Suggest spending improvements that increase profits"
+                "The Daily Pennsylvanian offers hands-on experience with real financial responsibilities. As part of our accounting and finance team, you'll help make sure our finances run smoothly.",
+                "You'll analyze the performance of DP’s investment portfolio, prepare monthly financial reports, and create our $1.5MM annual company budget.",
+                "Your job includes making sure we're staying within budget, finding any differences between expected and actual results, and suggesting ways to boost revenue. You'll also help with paying bills, handling payroll, and keeping our finances on track."
               ],
               "highlights": [],
               "highlightLinks": [],
@@ -36,7 +29,7 @@
             {
               "department": "Consulting",
               "text": [
-                "Consulting analysts source potential clients, develop strategic marketing campaigns, and produce pitch materials for client presentations. The Consulting team works to build relationships with local businesses post-pandemic and pursues new, innovative streams of revenue generation. By working with our outstanding business teams, DP consultants will learn to use creative problem solving and analytical skills to help our clients successfully reach the Penn community. The consulting team promotes quick thinking and strong teamwork."
+                "Consulting analysts source potential clients, develop strategic marketing campaigns, and produce pitch materials for client presentations. The Consulting team works to build relationships with local businesses and pursues new, innovative streams of revenue generation. By working with our outstanding business teams, DP consultants will learn to use creative problem solving and analytical skills to help our clients successfully reach the Penn community. The consulting team promotes quick thinking and strong teamwork."
               ],
               "highlights": [],
               "highlightLinks": [],

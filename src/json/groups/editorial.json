@@ -26,7 +26,7 @@
                 "https://www.thedp.com/article/2024/04/penn-primary-election-2024-results-turnout-voting",
                 "https://www.thedp.com/article/2024/03/penn-regular-decision-results-class-of-2028"
               ],
-              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/917417c6-2a39-487a-bd75-8913f3427445.sized-1000x1000.jpg')",
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/8a2d1f0b-a98b-463a-b92b-93b33c29ba89.sized-1000x1000.jpg')",
               "id": "news"
             },
             {
@@ -202,7 +202,7 @@
               "highlightLinks": [
                 "https://www.thedp.com/section/crosswords"
               ],
-              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8))",
+              "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/8cac5a85-7d63-48f4-859b-b93d342c8da5.sized-1000x1000.jpg')",
               "id": "puzzles"
             }
           ]          

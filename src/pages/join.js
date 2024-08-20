@@ -84,7 +84,7 @@ const Section = styled.section`
   p {
     font-size: 1.1rem;
   }
-  padding: 2rem 18rem;
+  padding: 2rem 17rem;
   text-align: center;
   background-size: cover;
   background-position: center;
@@ -101,7 +101,7 @@ const Tabs = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap; /* Wrap tabs to multiple rows on smaller screens */
-  margin: 1rem 0;
+  margin: 1rem 0.5rem;
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -148,7 +148,7 @@ const Highlights = styled.ul`
 
     a {
       color: inherit; /* Match link color to the rest of the section */
-      text-decoration: none;
+      text-decoration: underline;
 
       &:hover {
         text-decoration: underline;
