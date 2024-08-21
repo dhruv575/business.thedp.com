@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import { Link } from 'gatsby';
 
 import { ContainerJoin } from '../components/containerJoin';
-import { PLAYFAIR_DISPLAY_LIGHT, PLAYFAIR_DISPLAY_MEDIUM, POPPINS_REGULAR, POPPINS_SEMI_BOLD } from '../styles/fonts';
+import { APPARAT_LIGHT, APPARAT_REGULAR, PLAYFAIR_DISPLAY_LIGHT, PLAYFAIR_DISPLAY_MEDIUM, POPPINS_REGULAR, POPPINS_SEMI_BOLD } from '../styles/fonts';
 
 const Intro = styled.div`
-    ${PLAYFAIR_DISPLAY_LIGHT}
+    ${APPARAT_REGULAR}
     display: flex;
     justify-content: center;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://snworksceo.imgix.net/dpn/f8bd2c63-c51f-4400-8a60-5251f553a0dd.sized-1000x1000.jpg');
@@ -45,7 +45,7 @@ const IntroText = styled.div`
 `;
 
 const JoinButton = styled.div`
-    ${POPPINS_REGULAR}
+    ${APPARAT_REGULAR}
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -73,7 +73,7 @@ const JoinButton = styled.div`
 `;
 
 const Section = styled.section`
-  ${PLAYFAIR_DISPLAY_MEDIUM}
+  ${APPARAT_LIGHT}
   h2 {
     font-size: 3rem;
   }
@@ -109,7 +109,7 @@ const Tabs = styled.div`
 `;
 
 const Tab = styled.button`
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   margin: 0.5rem 0.5rem;
   background: rgba(255, 255, 255, 0.3);
   border: none;

@@ -119,3 +119,28 @@ export const MERRIWEATHER_BOLD = `
   font-family: 'Merriweather', serif;
   font-weight: 700;
 `;
+
+export const APPARAT_LIGHT = `
+  font-family: 'Apparat', sans-serif;
+  font-weight: 300;
+`;
+
+export const APPARAT_REGULAR = `
+  font-family: 'Apparat', sans-serif;
+  font-weight: 400;
+`;
+
+export const APPARAT_MEDIUM = `
+  font-family: 'Apparat', sans-serif;
+  font-weight: 500;
+`;
+
+export const APPARAT_SEMI_BOLD = `
+  font-family: 'Apparat', sans-serif;
+  font-weight: 600;
+`;
+
+export const APPARAT_BOLD = `
+  font-family: 'Apparat', sans-serif;
+  font-weight: 700;
+`;
