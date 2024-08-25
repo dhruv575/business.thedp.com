@@ -2,7 +2,7 @@ import React from 'react';
 import s from 'styled-components';
 
 import { Footer } from './footer';
-import { Header } from './header';
+import { Header } from './DPHeader';
 
 import utb from '../images/utb.png';
 import dp from '../images/dp.png';

@@ -8,6 +8,7 @@ import CollegeData from '../components/collegedata';
 import CompareColleges from '../components/CompareColleges';
 import StudentProfiles from '../components/StudentProfiles';
 import SimilarColleges from '../components/SimilarColleges';
+import ProgramData from '../components/ProgramData';
 
 import {
   Container
@@ -47,6 +48,7 @@ const ButtonContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
+  padding: 0rem 1rem;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -54,7 +56,7 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1rem;
   background-color: ${({ selected }) => (selected ? 'maroon' : 'navy')};
   color: white;
   font-size: 1rem;
@@ -145,6 +147,7 @@ const PeakAtPenn = () => {
         </SubHead>
         <ButtonContainer>
           <Button selected={currentSection === 'newsletter'} onClick={() => setCurrentSection('newsletter')}>Join Our Newsletter</Button>
+          <Button selected={currentSection === 'programs'} onClick={() => setCurrentSection('programs')}>Summer Program Database</Button>
           <Button selected={currentSection === 'data'} onClick={() => setCurrentSection('data')}>Explore College Data</Button>
           <Button selected={currentSection === 'compare'} onClick={() => setCurrentSection('compare')}>Compare Colleges</Button>
           <Button selected={currentSection === 'profiles'} onClick={() => setCurrentSection('profiles')}>Admitted Student Profiles</Button>
@@ -160,6 +163,13 @@ const PeakAtPenn = () => {
           </Title>
           <ContentGrid />
           <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
+        </>
+      )}
+
+      {currentSection === 'programs' && (
+        <>
+          <SectionTitle id="programs">SUMMER PROGRAM DATABASE</SectionTitle>
+          <ProgramData />
         </>
       )}
 
