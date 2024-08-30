@@ -5,43 +5,53 @@ const LandingScreen = () => {
   const [binaryCode, setBinaryCode] = useState('');
   const [canClose, setCanClose] = useState(false);
   const [isWiping, setIsWiping] = useState(false);
+  const [intervalTime, setIntervalTime] = useState(200); // Start slow
 
   useEffect(() => {
+    // Disable scrolling when the landing screen is active
+    document.body.style.overflow = showLanding ? 'hidden' : '';
+
     // Start the wipe effect after 4 seconds
-    const timer = setTimeout(() => {
+    const wipeTimer = setTimeout(() => {
       setIsWiping(true);
-      setTimeout(() => setShowLanding(false), 2000); // Hide after wipe animation completes
-    }, 3000);
+      setTimeout(() => {
+        setShowLanding(false);
+        document.body.style.overflow = ''; // Re-enable scrolling when hidden
+      }, 2000); // Hide after wipe animation completes
+    }, 2000);
 
     // Allow closing after 3 seconds
     const closeTimer = setTimeout(() => setCanClose(true), 2000);
 
-    // Generate binary code
+    // Generate binary code with dynamic speed-up
     const generateBinary = () => {
-      const newBinary = Array(200) // Increased array size for more numbers
+      const newBinary = Array(200)
         .fill(0)
         .map(() => Math.round(Math.random()))
         .join('');
       setBinaryCode((prevCode) => (prevCode + newBinary).slice(-5000)); // Keep the last 5000 characters
     };
 
-    const binaryInterval = setInterval(generateBinary, 50); // Increased frequency of number generation
-
-    // Disable scrolling while the landing screen is visible
-    document.body.style.overflow = 'hidden';
+    const binaryInterval = setInterval(() => {
+      generateBinary();
+      setIntervalTime((prev) => (prev > 50 ? prev - 10 : 50)); // Speed up gradually
+    }, intervalTime);
 
     return () => {
-      clearTimeout(timer);
+      clearTimeout(wipeTimer);
       clearTimeout(closeTimer);
       clearInterval(binaryInterval);
-      document.body.style.overflow = ''; // Re-enable scrolling when the component unmounts
+      document.body.style.overflow = ''; // Ensure scrolling is enabled if component unmounts
     };
-  }, []);
+  }, [showLanding, intervalTime]);
 
   const handleClick = () => {
     if (canClose) {
       setIsWiping(true);
-      setTimeout(() => setShowLanding(false), 2000); // Trigger wipe on click if allowed
+      setTimeout(() => {
+        setShowLanding(false);
+        document.body.style.overflow = ''; // Re-enable scrolling when hidden
+      }, 1000); // Trigger wipe on click if allowed
     }
   };
 
@@ -61,22 +71,22 @@ const LandingScreen = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center', // Centering the content
+        justifyContent: 'center',
         overflow: 'hidden',
         cursor: 'pointer',
         opacity: showLanding ? 1 : 0,
-        transition: 'opacity 2s ease-out', // Smoother fade-out transition
-        fontFamily: '"Courier New", Courier, monospace', // Hacker font style
-        animation: isWiping ? 'wipeUp 2s forwards' : '', // Apply wipe animation if triggered
+        transition: 'opacity 2s ease-out',
+        fontFamily: '"Courier New", Courier, monospace',
+        animation: isWiping ? 'wipeUp 1.5s forwards' : '',
         zIndex: 9999, // Ensures the landing screen is above all other elements
       }}
     >
       <div
         style={{
           padding: '1rem',
-          border: '2px solid #00ff00', // Green border
+          border: '2px solid #00ff00',
           textAlign: 'center',
-          backgroundColor: 'black', // Black background
+          backgroundColor: 'black',
         }}
       >
         <h1 style={{ fontSize: '3rem', margin: 0, color: '#00ff00' }}>DP Hacks</h1>
@@ -108,7 +118,7 @@ const LandingScreen = () => {
 
           @keyframes wipeUp {
             0% { transform: translateY(0); }
-            100% { transform: translateY(-100%); } // Wipes the landing page upwards
+            100% { transform: translateY(-100%); }
           }
         `}
       </style>
