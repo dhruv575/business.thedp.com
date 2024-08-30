@@ -16,6 +16,7 @@ import {
   MONTSERRAT_LIGHT,
   POPPINS_LIGHT
 } from '../styles/fonts'
+import LandingScreen from '../components/Hackathon/LandingPage';
 
 const Hero = s.div`
   text-align: center;
@@ -157,63 +158,64 @@ const Index = () => {
 
   return (
     <Container title="Hacks | ">
-      <Hero>
-        <HelloWorld> DP Hacks </HelloWorld>
-        <p style={{ fontSize: '1.5rem' }}>Backed by Afore Capital, Civilization Ventures</p>
-        <SubHead>
-            Build products to help the Penn community thrive, <br /> Solve problems you and your friends face daily.
-        </SubHead>
-      </Hero>
-      <SectionTitle> FORMAT </SectionTitle>
-      <Title> 
-        DP Hacks will kick off with an in-person event on Sunday, October 13 and culminating with presentations and judging on October 20th
-      </Title>
-      <ContentGrid />
-      <FormatSection>
-        <SectionTitle>LOGISTICS</SectionTitle>
-        <List>
-          <ListItem><strong>Eligiblity</strong></ListItem>
-          <ListItem>All Penn students are welcome to enter either track of DP Hacks, regardless of previous experience. Technical and Pitch development workshops will be provided throughout the week of the hackathon.</ListItem>
-          <ListSpacer />
-          <ListItem><strong>Registration</strong></ListItem>
-          <ListItem>Teams will be made of between 3-5 students. Registration is on a first-come, first-served basis, with the first 20 teams to register for each track being prioritized, and additional teams being promoted off the waitlist if opportunities arise. </ListItem>
-          <ListItem />
-          <ListItem>Teams must consist only of currently enrolled University of Pennsylvania students, and each student can compete in either the technical track OR the pitch track.</ListItem>
-          <ListSpacer />
-          <ListItem><strong>Kickoff Event</strong></ListItem>
-          <ListItem>DP Hacks will kick off with an opening event on September 21st where particpants will get the chance to hear from and network with our keynote representative and representatives from our sponsors.</ListItem>
-          <ListItem />
-          <ListItem>Teams will also have the chance to attend our workshops on web development, integrating artificial intelligence into your projects, and developing cohesive picthes. Detailed instructions and rubrics for each track will be presented at the Kickoff as well, along with information on how to join our Slack workspace.</ListItem>        
-          <ListSpacer />
-          <ListItem><strong>Development Week</strong></ListItem>
-          <ListItem>Spend the next week brainstorming, building, and refining your products before the final pitch day! There will be office hours for both tracks scattered throughout the week to help teams complete their projects.</ListItem>
-          <ListItem />
-          <ListItem>Technical Track Deliverables: Presentation, Relevant Code, Documentation</ListItem>
-          <ListSpacer />
-          <ListItem><strong>Presentation Day</strong></ListItem>
-          <ListItem>Present all the hard work you invested in the past week to our panel of professional and student judges, as well as all the other participants. Breakfast and Lunch will be provided, with presentations starting at 10:00 AM and winners being announced at 1:00 PM</ListItem>             
-        </List>
-        {/* ... more content ... */}
-      </FormatSection>
-      <FlexRow>
-        <DescriptionWrapper>
-          <SectionTitle>Example Project</SectionTitle>
-          <PageDescription>
-          Penn Course Search uses Natural Language Search to give Penn students truly comprehensive and detailed course recommendations. 
-          It allows students to effectively search for and find classes that suit their interests without having to search through Path@Penn. 
-          </PageDescription>
-          <PageDescription>
-          Penn Course Search is an artificial intelligence model using vector embedding, natural language processing, semantic search, and web development in React to fulfill needs for students on campus.
-          </PageDescription>
-        </DescriptionWrapper>
-        <ImageWrapper>
-          <Img fluid={data.file.childImageSharp.fluid} alt="Relevant Image" />
-        </ImageWrapper>
-      </FlexRow>
-      <FormatSection>
-        <SectionTitle>Our Partners</SectionTitle>
-        <PartnersRow />
-      </FormatSection>
+      <LandingScreen />
+        <Hero>
+          <HelloWorld> DP Hacks </HelloWorld>
+          <p style={{ fontSize: '1.5rem' }}>Backed by Afore Capital, Civilization Ventures</p>
+          <SubHead>
+              Build products to help the Penn community thrive, <br /> Solve problems you and your friends face daily.
+          </SubHead>
+        </Hero>
+        <SectionTitle> FORMAT </SectionTitle>
+        <Title> 
+          DP Hacks will kick off with an in-person event on Sunday, October 13 and culminating with presentations and judging on October 20th
+        </Title>
+        <ContentGrid />
+        <FormatSection>
+          <SectionTitle>LOGISTICS</SectionTitle>
+          <List>
+            <ListItem><strong>Eligiblity</strong></ListItem>
+            <ListItem>All Penn students are welcome to enter either track of DP Hacks, regardless of previous experience. Technical and Pitch development workshops will be provided throughout the week of the hackathon.</ListItem>
+            <ListSpacer />
+            <ListItem><strong>Registration</strong></ListItem>
+            <ListItem>Teams will be made of between 3-5 students. Registration is on a first-come, first-served basis, with the first 20 teams to register for each track being prioritized, and additional teams being promoted off the waitlist if opportunities arise. </ListItem>
+            <ListItem />
+            <ListItem>Teams must consist only of currently enrolled University of Pennsylvania students, and each student can compete in either the technical track OR the pitch track.</ListItem>
+            <ListSpacer />
+            <ListItem><strong>Kickoff Event</strong></ListItem>
+            <ListItem>DP Hacks will kick off with an opening event on September 21st where particpants will get the chance to hear from and network with our keynote representative and representatives from our sponsors.</ListItem>
+            <ListItem />
+            <ListItem>Teams will also have the chance to attend our workshops on web development, integrating artificial intelligence into your projects, and developing cohesive picthes. Detailed instructions and rubrics for each track will be presented at the Kickoff as well, along with information on how to join our Slack workspace.</ListItem>        
+            <ListSpacer />
+            <ListItem><strong>Development Week</strong></ListItem>
+            <ListItem>Spend the next week brainstorming, building, and refining your products before the final pitch day! There will be office hours for both tracks scattered throughout the week to help teams complete their projects.</ListItem>
+            <ListItem />
+            <ListItem>Technical Track Deliverables: Presentation, Relevant Code, Documentation</ListItem>
+            <ListSpacer />
+            <ListItem><strong>Presentation Day</strong></ListItem>
+            <ListItem>Present all the hard work you invested in the past week to our panel of professional and student judges, as well as all the other participants. Breakfast and Lunch will be provided, with presentations starting at 10:00 AM and winners being announced at 1:00 PM</ListItem>             
+          </List>
+          {/* ... more content ... */}
+        </FormatSection>
+        <FlexRow>
+          <DescriptionWrapper>
+            <SectionTitle>Example Project</SectionTitle>
+            <PageDescription>
+            Penn Course Search uses Natural Language Search to give Penn students truly comprehensive and detailed course recommendations. 
+            It allows students to effectively search for and find classes that suit their interests without having to search through Path@Penn. 
+            </PageDescription>
+            <PageDescription>
+            Penn Course Search is an artificial intelligence model using vector embedding, natural language processing, semantic search, and web development in React to fulfill needs for students on campus.
+            </PageDescription>
+          </DescriptionWrapper>
+          <ImageWrapper>
+            <Img fluid={data.file.childImageSharp.fluid} alt="Relevant Image" />
+          </ImageWrapper>
+        </FlexRow>
+        <FormatSection>
+          <SectionTitle>Our Partners</SectionTitle>
+          <PartnersRow />
+        </FormatSection>
     </Container>
   )
 }
