@@ -2,70 +2,102 @@ import React from 'react';
 import styled from 'styled-components';
 import { MONTSERRAT_LIGHT, POPPINS_BOLD } from '../../styles/fonts';
 
-const GridContainer = styled.div`
+// Main container to hold both the content block and prize boxes
+const MainGridContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr; // Two columns
-  grid-template-rows: auto auto; // Two rows, size adjusts to content
-  gap: 20px; // Space between grid items
-  padding: 0rem 2rem; // Padding around the entire grid
+  grid-template-columns: 1.5fr 1fr; // Two columns: content block (left) and prizes (right)
+  gap: 20px; // Space between the two main sections
+  padding: 0rem 2rem;
 
   @media (max-width: 768px) {
-    padding: 2rem 1rem; // Reduced padding for small screens
-    grid-template-columns: 1fr; // Makes it a single column layout on smaller screens
+    grid-template-columns: 1fr; // Stacks the sections vertically on smaller screens
+    padding: 2rem 1rem;
   }
 `;
 
+// Style for the content section on the left
 const ContentBlock = styled.div`
-  padding: 15px;
+  padding: 2rem 6rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
   animation: animateBg 10s linear infinite;
-
   background-image: linear-gradient(30deg, #000000, #003300, #006400, #002200);
   background-size: 400% 400%;
 
   @keyframes animateBg {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    padding: 2rem;
   }
 `;
 
+// Style for the right section containing prize blocks
+const PrizeGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr; // Single column for prize blocks
+  gap: 20px;
+`;
 
+// Style for individual prize blocks
+const PrizeBlock = styled.div`
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  background: #0a3c02;
+  color: #ffffff;
+`;
+
+// Title styles
 const Title = styled.h2`
   ${POPPINS_BOLD}
   color: #ffffff;
   font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
 `;
 
+// Description styles
 const Description = styled.p`
-  ${MONTSERRAT_LIGHT}
   font-size: 1rem;
-  color: #ffffff; // Medium grey text color
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
 `;
 
-// Sample component to display the grid with content
+// Combined component with content on the left and prizes on the right
 const ContentGrid = () => {
   return (
-    <GridContainer>
+    <MainGridContainer>
       <ContentBlock>
         <Title>Technical Track</Title>
         <Description>
-            Design products which help solve a problem that affects some portion of the Penn population! 
-            Use web design, artificial intelligence, or any other technology that you need to make some positive impact for the school.
-            Winners will work with DP engineers to integrate their projects into the Daily Pennsylvanian website, giving them access to our 5 million+ views an year!
-            They will also be given regular analytics reports to be used for their resume/portfolios. 
+          Design products which help solve a problem that affects some portion of the Penn population! You will be able to build projects that affect you day to day.
         </Description>
-      </ContentBlock>
-      <ContentBlock>
-        <Title>Pitch Track</Title>
         <Description>
-            If you have ever had thoughts on how to improve the Daily Pennsylvanian, take this chance!
-            The Pitch track involves coming up with a new product, idea, or opportunity within the media sector, conducting research and pitching your plan.
-            Pitch track winners will produce plans that fulfill a need for well defined audiences, creating both impact and interest.
-            They will be given a chance to launch their proposal with the DP Innovation Lab team, and be offered statistics on revenue generation from their product!
+          Use web design, artificial intelligence, or any other technology that you need to make some positive impact for the school. Past winners have gone on to develop YCombinator startups!
+        </Description>
+        <Description>
+          Winners will work with DP engineers to integrate their projects into the Daily Pennsylvanian website, giving them access to our 5 million+ views a year! Tons of free traction for your product.
+        </Description>
+        <Description>
+          They will also be given regular analytics reports to be used for their resume/portfolios. 
         </Description>
       </ContentBlock>
-    </GridContainer>
+      <PrizeGrid>
+        <PrizeBlock>
+          <Title>First Place</Title>
+          <Description>TBD</Description>
+        </PrizeBlock>
+        <PrizeBlock>
+          <Title>Second Place</Title>
+          <Description>TBD</Description>
+        </PrizeBlock>
+        <PrizeBlock>
+          <Title>Third Place</Title>
+          <Description>TBD</Description>
+        </PrizeBlock>
+      </PrizeGrid>
+    </MainGridContainer>
   );
 };
 

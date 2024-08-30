@@ -166,10 +166,9 @@ const Index = () => {
       </Hero>
       <SectionTitle> FORMAT </SectionTitle>
       <Title> 
-        DP Hacks will kick off with an in-person event on Saturday, September 21 and culminating with presentations and judging on September 28th
+        DP Hacks will kick off with an in-person event on Sunday, October 13 and culminating with presentations and judging on October 20th
       </Title>
       <ContentGrid />
-      <PrizesGrid />
       <FormatSection>
         <SectionTitle>LOGISTICS</SectionTitle>
         <List>
@@ -190,7 +189,6 @@ const Index = () => {
           <ListItem>Spend the next week brainstorming, building, and refining your products before the final pitch day! There will be office hours for both tracks scattered throughout the week to help teams complete their projects.</ListItem>
           <ListItem />
           <ListItem>Technical Track Deliverables: Presentation, Relevant Code, Documentation</ListItem>
-          <ListItem>Pitch Track Deliverables: Presentation, Audience Survey, Timeline and Implementation Proposal</ListItem>
           <ListSpacer />
           <ListItem><strong>Presentation Day</strong></ListItem>
           <ListItem>Present all the hard work you invested in the past week to our panel of professional and student judges, as well as all the other participants. Breakfast and Lunch will be provided, with presentations starting at 10:00 AM and winners being announced at 1:00 PM</ListItem>             
