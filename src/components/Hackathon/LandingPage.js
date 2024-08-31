@@ -22,7 +22,7 @@ const LandingScreen = () => {
     const wipeTimer = setTimeout(() => {
       setIsWiping(true);
       setTimeout(() => setShowLanding(false), 1500);
-    }, 2000);
+    }, 1500);
 
     const closeTimer = setTimeout(() => setCanClose(true), 1500);
 

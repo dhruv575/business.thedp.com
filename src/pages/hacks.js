@@ -161,7 +161,7 @@ const Index = () => {
       <LandingScreen />
         <Hero>
           <HelloWorld> DP Hacks </HelloWorld>
-          <p style={{ fontSize: '1.5rem' }}>Backed by Afore Capital, Civilization Ventures</p>
+          <p style={{ fontSize: '1.5rem' }}>Backed by Afore Capital, Civilization Ventures, Comma Capital</p>
           <SubHead>
               Build products to help the Penn community thrive, <br /> Solve problems you and your friends face daily.
           </SubHead>

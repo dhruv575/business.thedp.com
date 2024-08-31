@@ -11,7 +11,12 @@
     },
     {
         "name": "Civilization Ventures",
-        "img": "../images/partnerLogos/civilization.jpg",
+        "img": "../images/partnerLogos/civ.jpg",
         "link": "https://www.civilizationventures.com/"
+    },
+    {
+        "name": "Comma Capital",
+        "img": "../images/partnerLogos/cc.jpg",
+        "link": "https://www.linkedin.com/company/comma-capital/posts/?feedView=all"
     }
 ]

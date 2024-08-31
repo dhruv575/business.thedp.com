@@ -29,6 +29,10 @@ const ContentBlock = styled.div`
     50% { background-position: 100% 50%; }
     padding: 2rem;
   }
+
+  @media (max-width: 768px) {
+    padding: 2rem 2rem;
+  }
 `;
 
 // Style for the right section containing prize blocks
