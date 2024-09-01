@@ -72,6 +72,30 @@ const JoinButton = styled.div`
     }
 `;
 
+const ApplyButton = styled.div`
+    ${APPARAT_REGULAR}
+    display: inline-block; /* Allow the button to size based on its content */
+    padding: 0.5rem 1rem; /* Adjust padding to match the text size */
+    border: 1px solid #AA1E22;
+    border-radius: 8px;
+    background-color: #AA1E22;
+    color: #FFF;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
+    text-align: center; /* Center the text inside the button */
+    margin: 0 auto; /* Center the button horizontally within its row */
+
+    &:hover {
+        transform: scale(1.05); /* Slightly expand the button */
+        background-color: #BB2E33; /* Change the background color on hover */
+    }
+
+    @media (max-width: 768px) {
+        position: static; /* Remove any fixed positioning */
+        margin: 1rem auto; /* Center the button in smaller screens as well */
+    }
+`;
+
 const Section = styled.section`
   ${APPARAT_LIGHT}
   h2 {
@@ -218,6 +242,13 @@ const JoinPage = () => {
                 </Highlights>
               </>
             )}
+            {department?.apply && (
+              <>
+                <Link to={department.apply} target="_blank">
+                  <ApplyButton>Apply to {department.department}</ApplyButton>
+                </Link>
+              </>
+            )}
           </Content>
         </Section>
       );
@@ -265,6 +296,13 @@ const JoinPage = () => {
                 </Highlights>
               </>
             )}
+            {selectedDepartment?.apply && (
+              <>
+                <Link to={selectedDepartment.apply} target="_blank">
+                  <ApplyButton>Apply to {selectedDepartment.department}</ApplyButton>
+                </Link>
+              </>
+            )}
           </Content>
         </Section>
       );
@@ -278,7 +316,7 @@ const JoinPage = () => {
           <h1>The Daily Pennsylvanian, Inc.</h1>
           <h3>Don't just live the story of a lifetime. Tell it.</h3>
           <Link to="#apply">
-            <JoinButton>Join Now</JoinButton>
+            <JoinButton>General Interest Form</JoinButton>
           </Link>
         </IntroText>
       </Intro>

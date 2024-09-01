@@ -27,7 +27,8 @@
                 "https://www.thedp.com/article/2024/03/penn-regular-decision-results-class-of-2028"
               ],
               "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/8a2d1f0b-a98b-463a-b92b-93b33c29ba89.sized-1000x1000.jpg')",
-              "id": "news"
+              "id": "news",
+              "apply": "https://forms.gle/evq1uwGPuAtrKqAt9"
             },
             {
               "department": "Sports",
@@ -51,7 +52,8 @@
                 "https://www.thedp.com/article/2023/11/penn-swimming-matt-fallon-feature-profile-olympic-mens"
               ],
               "background": "linear-gradient(rgba(170, 30, 34, 0.9), rgba(170, 30, 34, 0.9)), url('https://snworksceo.imgix.net/dpn/cec0e468-8fd7-4820-906d-9981ae887347.sized-1000x1000.jpg')",
-              "id": "sports"
+              "id": "sports",
+              "apply": "https://forms.gle/tV1CB6f4rrSg2Um38"
             },
             {
               "department": "Opinion",
@@ -78,7 +80,8 @@
                 "https://www.thedp.com/article/2022/12/hold-celebrities-accountable-for-antisemitism"
               ],
               "background": "linear-gradient(rgba(170, 30, 34, 0.9), rgba(170, 30, 34, 0.9)), url('https://snworksceo.imgix.net/dpn/63f97845-7cb5-49eb-8322-bca5667583bc.sized-1000x1000.jpg')",
-              "id": "opinion"
+              "id": "opinion",
+              "apply": "https://forms.gle/UsqSmhA14FeLAi976"
             },
             {
               "department": "Copy",
@@ -89,7 +92,8 @@
               "highlights": [],
               "highlightLinks": [],
               "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/9a678efe-73b0-4fed-9f63-2278da389db8.sized-1000x1000.jpg')",
-              "id": "copy"
+              "id": "copy",
+              "apply": "https://forms.gle/1w7eYP5RdVJ6RfNw8"
             },
             {
               "department": "Multimedia",
@@ -121,7 +125,8 @@
                 "https://www.instagram.com/reel/C2f74m4upFI/"
               ],
               "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://media.giphy.com/media/KHKlf5Cnvzm1HDkVrL/giphy.gif')",
-              "id": "multimedia"
+              "id": "multimedia",
+              "apply": "https://forms.gle/jPN39CxzWSJqjdFG8"
             },
             {
               "department": "Design",
@@ -141,7 +146,8 @@
                 "https://issuu.com/34st"
               ],
               "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/90337c0f-5064-4457-917f-c728ffcf8e58.sized-1000x1000.jpg')",
-              "id": "design"
+              "id": "design",
+              "apply": "https://forms.gle/21Sf1XhUsSto9kAo8"
             },
             {
               "department": "Social Media",
@@ -164,7 +170,8 @@
                 "https://www.instagram.com/dailypenn/"
               ],
               "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/4c31d16d-8363-41df-80a0-a5564b011215.sized-1000x1000.jpg')",
-              "id": "social"
+              "id": "social",
+              "apply": "https://forms.gle/bFMKof1BopZBsDdz6"
             },
             {
               "department": "Podcasts",
@@ -185,7 +192,8 @@
                 "https://www.thedp.com/multimedia/a6f357ee-8b80-44d0-b390-55e8b982e85d"
               ],
               "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/51d7e036-6b77-402a-9d6d-b1f7b8c3ab8c.sized-1000x1000.jpg')",
-              "id": "podcasts"
+              "id": "podcasts",
+              "apply": "https://forms.gle/n1MhmK3FcBNw3WVF9"
             },
             {
               "department": "Puzzles",
@@ -200,7 +208,8 @@
                 "https://www.thedp.com/section/crosswords"
               ],
               "background": "linear-gradient(rgba(170, 30, 34, 0.8), rgba(170, 30, 34, 0.8)), url('https://snworksceo.imgix.net/dpn/8cac5a85-7d63-48f4-859b-b93d342c8da5.sized-1000x1000.jpg')",
-              "id": "puzzles"
+              "id": "puzzles",
+              "apply": "https://forms.gle/esh5VtuLYWW29NR36"
             }
           ]          
     }
