@@ -18,5 +18,10 @@
         "name": "Comma Capital",
         "img": "../images/partnerLogos/cc.jpg",
         "link": "https://www.linkedin.com/company/comma-capital/posts/?feedView=all"
+    },
+    {
+        "name": "Levo",
+        "img": "../images/partnerLogos/levo.jpg",
+        "link": "https://www.hellolevo.com/"
     }
 ]

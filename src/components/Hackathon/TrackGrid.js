@@ -84,13 +84,13 @@ const ContentGrid = () => {
           Winners will work with DP engineers to integrate their projects into the Daily Pennsylvanian website, giving them access to our 5 million+ views a year! Tons of free traction for your product.
         </Description>
         <Description>
-          They will also be given regular analytics reports to be used for their resume/portfolios. 
+          Winners will be given first round interviews by our well established startup partners.
         </Description>
       </ContentBlock>
       <PrizeGrid>
         <PrizeBlock>
           <Title>First Place</Title>
-          <Description>TBD</Description>
+          <Description>Interviews at 2 of our startup partners</Description>
         </PrizeBlock>
         <PrizeBlock>
           <Title>Second Place</Title>
