@@ -100,7 +100,7 @@ const Recruitment = ({ open }) => {
               <Badge> {role} </Badge>
             ))}
             <StyledAnchor
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdshBhPBctwHmt52D1iUAcv_f0OVKUqM3RXiCJCvyvBojYk0A/closedform"
+              href="https://forms.gle/KhCX4md84LwZ5zHfA"
               target="_blank"
             >
               <div style={{ marginTop: '2rem' }}>
@@ -144,11 +144,6 @@ const Apply = () => {
       {recruiting ? (
         <Container title="Apply | ">
           <Recruitment open = {true}/>
-          <Wrapper>
-            <IFrameWrapper>
-              <iframe class="application-embed" title="team_apply" src="https://docs.google.com/forms/d/e/1FAIpQLSdshBhPBctwHmt52D1iUAcv_f0OVKUqM3RXiCJCvyvBojYk0A/closedform" frameborder="0" onmousewheel="" width="100%" height="600" style={{ background: "transparent", border: "1px solid #ccc" }}></iframe>
-            </IFrameWrapper>
-          </Wrapper>
         </Container>
       ) : (
         <Container title="Apply | ">
