@@ -2,31 +2,39 @@
     {
         "name": "Daily Pennsylvanian",
         "img": "../images/partnerLogos/dp-logo.png",
-        "link": "https://www.thedp.com"
+        "link": "https://www.thedp.com",
+        "affiliation": "vc"
     },
     {
         "name": "Afore Capital",
         "img": "../images/partnerLogos/afore capital.jpg",
-        "link": "https://www.afore.vc/"
+        "link": "https://www.afore.vc/",
+        "affiliation": "vc"
     },
     {
         "name": "Civilization Ventures",
         "img": "../images/partnerLogos/civ.jpg",
-        "link": "https://www.civilizationventures.com/"
+        "link": "https://www.civilizationventures.com/",
+        "affiliation": "vc"
     },
     {
         "name": "Comma Capital",
         "img": "../images/partnerLogos/cc.jpg",
-        "link": "https://www.linkedin.com/company/comma-capital/posts/?feedView=all"
+        "link": "https://www.linkedin.com/company/comma-capital/posts/?feedView=all",
+        "affiliation": "vc"
     },
     {
         "name": "Levo",
         "img": "../images/partnerLogos/levo.jpg",
-        "link": "https://www.hellolevo.com/"
+        "link": "https://www.hellolevo.com/",
+        "affiliation": "startup",
+        "description": "Levo is working to elevate caregiver experience and increase retention rates for health systems around the country. Through their customizable text-based surveys and practical insights, Levo helps build better company culture that encourages employees to stay while saving costs for customers. They're already partnered with several of the country's largest health provider networks, and are expanding rapidly!"
     },
     {
         "name": "S44 Automotive",
         "img": "../images/partnerLogos/s44.jpg",
-        "link": "https://www.s44.team/s44-automotive"
+        "link": "https://www.s44.team/s44-automotive",
+        "affiliation": "startup",
+        "description": "S44 Automotive, a spinout of the S44 Holdings group, is working on revolutionizing how we buy cars. Their incredibly technical team is building out several products that make it easier for retailers to sell automotives based off of machine learning, 3D technology, app development, and much more. Based out of New Jersey, S44 works closely with BMW amongst other clients on their evergrowing roster."
     }
 ]

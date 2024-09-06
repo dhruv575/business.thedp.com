@@ -81,24 +81,24 @@ const ContentGrid = () => {
           Use web design, artificial intelligence, or any other technology that you need to make some positive impact for the school. Past winners have gone on to develop YCombinator startups!
         </Description>
         <Description>
-          Winners will work with DP engineers to integrate their projects into the Daily Pennsylvanian website, giving them access to our 5 million+ views a year! Tons of free traction for your product.
+          Winners will work with DP engineers to integrate their projects into the Daily Pennsylvanian website, giving them access to our 5 million+ views a year! Tons of free traction for your product, and regular analytics reports so that you can keep your resume up to date!
         </Description>
         <Description>
-          Winners will be given first round interviews by our well established startup partners.
+          Winners will be given first round interviews by our well established startup partners. This is a great chance for you to show that you're a developer who moves fast and builds people-centric products, and potentially get hired for it!
         </Description>
       </ContentBlock>
       <PrizeGrid>
         <PrizeBlock>
           <Title>First Place</Title>
-          <Description>Interviews at 2 of our startup partners</Description>
+          <Description>First Round Intern Interviews at 2 of our established startup partners ($1000000+ ARR, 3+ years in operation)</Description>
         </PrizeBlock>
         <PrizeBlock>
           <Title>Second Place</Title>
-          <Description>TBD</Description>
+          <Description>First Round Intern Interviews at 2 of our established startup partners ($1000000+ ARR, 3+ years in operation)</Description>
         </PrizeBlock>
         <PrizeBlock>
           <Title>Third Place</Title>
-          <Description>TBD</Description>
+          <Description>One on One mentorship with Series A startup leadership (raised 30 mil+) and YC startup foudners with potential for future opportunities</Description>
         </PrizeBlock>
       </PrizeGrid>
     </MainGridContainer>

@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components';
 import ContentGrid from '../components/Hackathon/TrackGrid'
-import PrizesGrid from '../components/Hackathon/PrizeGrid'
+import StartupGrid from '../components/Hackathon/StartupGrid';
 import PartnersRow from '../components/Hackathon/PartnerScroll'
 import {
   Container
@@ -17,6 +17,23 @@ import {
   POPPINS_LIGHT
 } from '../styles/fonts'
 import LandingScreen from '../components/Hackathon/LandingPage';
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = React.useState(false);
+
+  React.useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust the width as needed
+    };
+
+    checkMobile(); // Check on initial load
+    window.addEventListener('resize', checkMobile); // Check on resize
+
+    return () => window.removeEventListener('resize', checkMobile); // Cleanup
+  }, []);
+
+  return isMobile;
+};
 
 const Hero = s.div`
   text-align: center;
@@ -142,8 +159,26 @@ const FlexRow = s.div`
     flex-direction: column;
   }
 `
+const Button = styled.a`
+  display: inline-block;
+  margin: 1rem 1rem 0 0;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #004d00;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #003300; // Darker green on hover
+  }
+`;
 
 const Index = () => {
+  const isMobile = useIsMobile();
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "pcs.png" }) {
@@ -158,7 +193,7 @@ const Index = () => {
 
   return (
     <Container title="Hacks | ">
-      <LandingScreen />
+      {!isMobile && <LandingScreen />}
         <Hero>
           <HelloWorld> DP Hacks </HelloWorld>
           <p style={{ fontSize: '1.5rem', marginBottom:'0rem' }}>Backed by Afore Capital, Civilization Ventures, Comma Capital</p>
@@ -166,6 +201,18 @@ const Index = () => {
           <SubHead>
               Build products to help the Penn community thrive, <br /> Solve problems you and your friends face daily.
           </SubHead>
+          <div>
+            <Button href="#partners-scroll">
+              Meet Our Partners
+            </Button>
+            <Button
+              href="https://forms.gle/h49omtknycDa9TyP6"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Join Our Mailing List
+            </Button>
+          </div>
         </Hero>
         <SectionTitle> FORMAT </SectionTitle>
         <Title> 
@@ -213,10 +260,11 @@ const Index = () => {
             <Img fluid={data.file.childImageSharp.fluid} alt="Relevant Image" />
           </ImageWrapper>
         </FlexRow>
-        <FormatSection>
+        <FormatSection id="partners-scroll">
           <SectionTitle>Our Partners</SectionTitle>
           <PartnersRow />
         </FormatSection>
+        <StartupGrid />
     </Container>
   )
 }
