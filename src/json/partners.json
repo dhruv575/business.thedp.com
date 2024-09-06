@@ -35,6 +35,13 @@
         "img": "../images/partnerLogos/s44.jpg",
         "link": "https://www.s44.team/s44-automotive",
         "affiliation": "startup",
-        "description": "S44 Automotive, a spinout of the S44 Holdings group, is working on revolutionizing how we buy cars. Their incredibly technical team is building out several products that make it easier for retailers to sell automotives based off of machine learning, 3D technology, app development, and much more. Based out of New Jersey, S44 works closely with BMW amongst other clients on their evergrowing roster."
+        "description": "Our vision is to disrupt automotive retail for consumers and manufacturers by connecting the consumer buying journey with the manufacturer's supply chain through predictive analytics. Our personalization API & co-pilot solution guide shoppers in their product discovery while our predictive ordering solution helps manufacturers stock the right cars at the right dealer, at the right time. In partnership with two leading OEMs in North America, our solutions are already driving multiple sales & production processes and have yielded double digit lifts for several marketing & sales KPIs."
+    },
+    {
+        "name": "Venture Camp",
+        "img": "../images/partnerLogos/vc.png",
+        "link": "https://www.venturecamp.org/",
+        "affiliation": "startup",
+        "description": "Founded by M&T graduate Ben Hsu after raising over 10 million dollars from Kleiner Perkins for his previous startup, Venture Camp aims to build the next generation of entrepreunerial talent through startup bootcamps. With multiple successful past camps and several internal technical projects running, as well as mentorship from Open AI and Google engineers, tech interns at Venture Camp are able to work on exciting projects udner great mentorship."
     }
 ]

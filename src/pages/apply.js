@@ -100,7 +100,7 @@ const Recruitment = ({ open }) => {
               <Badge> {role} </Badge>
             ))}
             <StyledAnchor
-              href="https://forms.gle/KhCX4md84LwZ5zHfA"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeM4wn0TUuHr_fNb1e3lkClVR6yh0xNCth3_5zuhjkToG_GFg/viewform"
               target="_blank"
             >
               <div style={{ marginTop: '2rem' }}>

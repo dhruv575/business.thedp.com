@@ -197,7 +197,7 @@ const Index = () => {
         <Hero>
           <HelloWorld> DP Hacks </HelloWorld>
           <p style={{ fontSize: '1.5rem', marginBottom:'0rem' }}>Backed by Afore Capital, Civilization Ventures, Comma Capital</p>
-          <p style={{ fontSize: '1.75rem', marginBottom:'-0.5rem' }}>Partnered with Levo, S44 Automotive</p>
+          <p style={{ fontSize: '1.75rem', marginBottom:'-0.5rem' }}>Partnered with Levo, S44 Automotive, Venture Camp</p>
           <SubHead>
               Build products to help the Penn community thrive, <br /> Solve problems you and your friends face daily.
           </SubHead>
