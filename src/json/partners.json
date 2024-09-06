@@ -23,5 +23,10 @@
         "name": "Levo",
         "img": "../images/partnerLogos/levo.jpg",
         "link": "https://www.hellolevo.com/"
+    },
+    {
+        "name": "S44 Automotive",
+        "img": "../images/partnerLogos/s44.jpg",
+        "link": "https://www.s44.team/s44-automotive"
     }
 ]
