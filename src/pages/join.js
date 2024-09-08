@@ -242,13 +242,13 @@ const JoinPage = () => {
                 </Highlights>
               </>
             )}
-            {department?.apply && (
+            {/* {department?.apply && (
               <>
                 <Link to={department.apply} target="_blank">
                   <ApplyButton>Apply to {department.department}</ApplyButton>
                 </Link>
               </>
-            )}
+            )} */}
           </Content>
         </Section>
       );
@@ -296,13 +296,13 @@ const JoinPage = () => {
                 </Highlights>
               </>
             )}
-            {selectedDepartment?.apply && (
+            {/* {selectedDepartment?.apply && (
               <>
                 <Link to={selectedDepartment.apply} target="_blank">
                   <ApplyButton>Apply to {selectedDepartment.department}</ApplyButton>
                 </Link>
               </>
-            )}
+            )} */}
           </Content>
         </Section>
       );
@@ -315,9 +315,9 @@ const JoinPage = () => {
         <IntroText>
           <h1>The Daily Pennsylvanian, Inc.</h1>
           <h3>Don't just live the story of a lifetime. Tell it.</h3>
-          <Link to="#apply">
+          {/* <Link to="#apply">
             <JoinButton>General Interest Form</JoinButton>
-          </Link>
+          </Link> */}
         </IntroText>
       </Intro>
       {renderSection(editorialData, 'editorial')}
