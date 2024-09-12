@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import ContentGrid from '../components/hsGrid';
 import CollegeData from '../components/collegedata';
 import CompareColleges from '../components/CompareColleges';
-import StudentProfiles from '../components/StudentProfiles';
 import SimilarColleges from '../components/SimilarColleges';
 import ProgramData from '../components/ProgramData';
 
@@ -88,6 +87,20 @@ const Title = styled.h2`
   }
 `;
 
+
+const Disclaimer = styled.h2`
+  ${POPPINS_LIGHT}
+  color: black;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  padding: 0.1rem 35%;
+
+  @media screen and (max-width: 768px) {
+    padding: 0rem 1rem;
+  }
+`;
+
 const FormatSection = s.section`
   padding: 0.5rem 2rem;
   padding-bottom: 2rem;
@@ -145,12 +158,14 @@ const PeakAtPenn = () => {
         <SubHead>
           Breaking into the Ivy League. Powered by the Ivy League.
         </SubHead>
+        <Disclaimer>
+          From the Daily Pennsylvanian, Penn's independent student newspaper of 400+ Penn students. Not associated with Penn Admissions.
+        </Disclaimer>
         <ButtonContainer>
           <Button selected={currentSection === 'newsletter'} onClick={() => setCurrentSection('newsletter')}>Join Our Newsletter</Button>
           <Button selected={currentSection === 'programs'} onClick={() => setCurrentSection('programs')}>Summer Program Database</Button>
           <Button selected={currentSection === 'data'} onClick={() => setCurrentSection('data')}>Explore College Data</Button>
           <Button selected={currentSection === 'compare'} onClick={() => setCurrentSection('compare')}>Compare Colleges</Button>
-          <Button selected={currentSection === 'profiles'} onClick={() => setCurrentSection('profiles')}>Admitted Student Profiles</Button>
           <Button selected={currentSection === 'similar'} onClick={() => setCurrentSection('similar')}>Find Similar Universities</Button>
         </ButtonContainer>
       </Hero>
@@ -159,7 +174,7 @@ const PeakAtPenn = () => {
         <>
           <SectionTitle id="newsletter">OUR NEWSLETTER</SectionTitle>
           <Title>
-            Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and essays and profiles from current Penn students!
+            Sign up for our Biweekly newsletter which will provide you with all the information necessary to ace your Penn essays! News about the new ongoing on campus, the biggest changes in the general admissions world, and experiences from current Penn students!
           </Title>
           <ContentGrid />
           <iframe src="https://forms.gle/wcYAGuKtkpBgXTG56" width="100%" height="1000rem" title='highschool_signup'>Loading…</iframe>
@@ -176,6 +191,9 @@ const PeakAtPenn = () => {
       {currentSection === 'data' && (
         <>
           <SectionTitle id="data">COLLEGE DATA</SectionTitle>
+          <Disclaimer>
+            Data sourced from Niche, Common Data Sets, and US News! Please check them out for much more detailed information.
+          </Disclaimer>
           <CollegeData />
         </>
       )}
@@ -183,23 +201,19 @@ const PeakAtPenn = () => {
       {currentSection === 'compare' && (
         <>
           <SectionTitle id="compare">COMPARE COLLEGES</SectionTitle>
+          <Disclaimer>
+            Data sourced from Niche, Common Data Sets, and US News! Please check them out for much more detailed information.
+          </Disclaimer>
           <CompareColleges />
-        </>
-      )}
-
-      {currentSection === 'profiles' && (
-        <>
-          <SectionTitle id="profiles">ADMITTED PROFILES</SectionTitle>
-          <StudentProfiles />
-          <Title>
-            For access to more admitted profiles, subscribe to our newsletter! Our first edition will contain 4 more profiles and 1-2 more in every one after!
-          </Title>
         </>
       )}
 
       {currentSection === 'similar' && (
         <>
           <SectionTitle id="similar">Find Most Similar Colleges</SectionTitle>
+          <Disclaimer>
+            Data sourced from Niche, Common Data Sets, and US News! Please check them out for much more detailed information.
+          </Disclaimer>
           <SimilarColleges />
         </>
       )}
