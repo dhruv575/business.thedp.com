@@ -81,8 +81,8 @@ const PersonCard = styled.div`
 `;
 
 const PersonImage = styled.img`
-  width: 150px;
-  height: 150px;
+  width: 14rem;
+  height: 14rem;
   object-fit: cover;
   margin-bottom: 1rem;
 `;
