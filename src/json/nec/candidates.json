@@ -225,7 +225,14 @@
             {
                 "name": "Jose Carlos Serrano",
                 "image": "https://i.ibb.co/J2GFVvN/stand-in.png",
-                "email": "mailto:joseserr@sas.upenn.edu"
+                "email": "mailto:joseserr@sas.upenn.edu",
+                "introduction":"My name is Carlos, and I am a candidate for President for the Class Board of 2028. I am endeavoring upon this because I believe in the importance of building consensus. My background certainly speaks to this. As a high school student, I served as President of the Student Council, and emphasized the importance of community events. These events came from direct cooperation with the student body and acted as a remedy to the lingering effects of isolation during the pandemic. We can build community through strategic event planning that encourages cooperation, community, and learning among all four undergraduate schools.",
+                "platform_points":[
+                    "Creating events, with an emphasis on Penn traditions, that intentionally bring together students from all undergraduate schools in which we can learn from one another and thrive together.",
+                    "Putting the Class of 2028 at the center of the decision-making process through continuous engagement and outreach. As President, I will ensure that the Board is representative of your ideas. ",
+                    "Utilizing the resource of the great city of Philadelphia as a laboratory for learning and exploration.",
+                    "Moving forward as one school to help foster an environment where all students feel a sense of community and inclusivity here at Penn."
+                ]
             },
             {
                 "name": "Brad Ferdinand",
