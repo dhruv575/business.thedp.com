@@ -52,10 +52,10 @@ const ContentGrid = () => {
   return (
     <GridContainer>
       <ContentBlock>
-        <Title>Admissions Content</Title>
+        <Title>Penn Content</Title>
         <Description>
-          Get insider tips and strategies from admissions experts to craft compelling Penn application essays that stand out. 
-          Stay informed with the latest updates on Penn's campus life, admissions trends, and success stories from current students to inspire and guide your own application journey. 
+          Stay informed with the latest updates on Penn's campus life and success stories from current students to help you better understand the university.
+          Hear from real people and read real stories from the Daily Pennsylvanian's 400+ student journalists! 
         </Description>
       </ContentBlock>
       <ContentBlock>
