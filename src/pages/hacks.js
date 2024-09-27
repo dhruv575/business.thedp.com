@@ -206,11 +206,11 @@ const Index = () => {
               Meet Our Partners
             </Button>
             <Button
-              href="https://forms.gle/h49omtknycDa9TyP6"
+              href="https://forms.gle/3uGLGU47rYKm3ZAn6"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Join Our Mailing List
+              Apply to DP Hacks!
             </Button>
           </div>
         </Hero>

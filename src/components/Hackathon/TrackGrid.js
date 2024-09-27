@@ -90,15 +90,15 @@ const ContentGrid = () => {
       <PrizeGrid>
         <PrizeBlock>
           <Title>First Place</Title>
-          <Description>First Round Intern Interviews at 2 of our established startup partners ($1000000+ ARR, 3+ years in operation)</Description>
+          <Description>$600 + First Round Intern Interviews at 1 of our established startup partners ($1000000+ ARR, 3+ years in operation)</Description>
         </PrizeBlock>
         <PrizeBlock>
           <Title>Second Place</Title>
-          <Description>First Round Intern Interviews at 2 of our startup partners who have raised $10 million+ and successfully exited previous startups</Description>
+          <Description>$400 + First Round Intern Interviews at 1 of our startup partners who have raised $10 million+ and successfully exited previous startups</Description>
         </PrizeBlock>
         <PrizeBlock>
           <Title>Third Place</Title>
-          <Description>One on One mentorship with Series A startup leadership (raised 30 mil+) and YC startup foudners with potential for future opportunities</Description>
+          <Description>$200 + First Round Intern Interviews at 1 of our startup partners who are revolutionizing clinical retention and healthcare</Description>
         </PrizeBlock>
       </PrizeGrid>
     </MainGridContainer>
