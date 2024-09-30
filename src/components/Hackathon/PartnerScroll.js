@@ -22,7 +22,7 @@ const PartnerWrapper = styled.div`
 const PartnerLogo = styled.img`
     height: 200px;
     transition: opacity 0.3s ease-in-out;
-    width: 100%;
+    width: 200px;
 `;
 
 const Overlay = styled.div`

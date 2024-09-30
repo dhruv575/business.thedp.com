@@ -231,7 +231,7 @@ const Index = () => {
             <ListItem>Teams must consist only of currently enrolled University of Pennsylvania students, and each student can compete in either the technical track OR the pitch track.</ListItem>
             <ListSpacer />
             <ListItem><strong>Kickoff Event</strong></ListItem>
-            <ListItem>DP Hacks will kick off with an opening event on September 21st where particpants will get the chance to hear from and network with our keynote representative and representatives from our sponsors.</ListItem>
+            <ListItem>DP Hacks will kick off with an opening event on October 13th where particpants will get the chance to hear from and network with our keynote representative and representatives from our sponsors.</ListItem>
             <ListItem />
             <ListItem>Teams will also have the chance to attend our workshops on web development, integrating artificial intelligence into your projects, and developing cohesive picthes. Detailed instructions and rubrics for each track will be presented at the Kickoff as well, along with information on how to join our Slack workspace.</ListItem>        
             <ListSpacer />
